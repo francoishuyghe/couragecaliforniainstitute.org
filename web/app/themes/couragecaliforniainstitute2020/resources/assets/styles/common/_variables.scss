@@ -1,0 +1,23 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #525ddc,
+  beige: #EEE6D9,
+  teal: #0BBAB4,
+  white: #000000,
+);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+//Fonts
+@font-face {
+  font-family: 'Gilam';
+  src: url('../../fonts/Gilam-Bold.woff2') format('woff2'),
+      url('../../fonts/Gilam-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
