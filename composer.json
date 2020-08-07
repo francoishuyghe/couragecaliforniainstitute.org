@@ -45,7 +45,7 @@
         },
         "require": {
           "composer/installers": "^1.4",
-          "ffraenz/private-composer-installer": "^2.0"
+          "philippbaschke/acf-pro-installer": "^1.0"
         }
       }
     }
