@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1d34d1e1106debfca84d928cd38424e",
+    "content-hash": "987b98b52811b9e6c81dd72ba6b4569a",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -169,6 +169,21 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin"
+        },
+        {
+            "name": "deliciousbrains-plugin/wp-offload-media",
+            "version": "2.4.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-offload-media&version=2.4.1&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "installer-name": "amazon-s3-and-cloudfront-pro"
+            }
         },
         {
             "name": "ffraenz/private-composer-installer",
