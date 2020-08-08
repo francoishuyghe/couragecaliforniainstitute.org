@@ -5,3 +5,10 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+header.banner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

@@ -4,9 +4,14 @@
 $theme-colors: (
   primary: #525ddc,
   beige: #EEE6D9,
+  white: #ffffff,
   teal: #0BBAB4,
-  white: #000000,
+  black: #000000,
+  blue:#0C71CE,
+  orange: #FCA620
 );
+
+$grid-gutter: 50px;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;

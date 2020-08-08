@@ -1,0 +1,55 @@
+.page.home{
+    section{
+        padding: $grid-gutter * 2 0;
+    }
+
+    #intro{
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left top;
+    }
+
+    #register{
+        padding: 0;
+        background-color: theme-color(blue);
+
+        .text{
+            display: flex;
+            align-items: center;
+            min-height: 500px;
+
+            .wrap{
+                padding: $grid-gutter;
+            }
+        }
+
+        .image{
+            background-size: cover;
+        }
+    }
+
+    #newsletter{
+        background-color: theme-color(orange);
+        text-align: center;
+    }
+
+    #dates{
+        background-color: theme-color(teal);
+        color: theme-color(white);
+    }
+
+    #about{
+        background-color: theme-color(blue);
+        color: theme-color(white);
+        text-align: center;
+        
+        h3{
+            color: theme-color(orange);
+        }
+    }
+}

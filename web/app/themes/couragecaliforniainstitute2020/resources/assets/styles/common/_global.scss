@@ -2,27 +2,3 @@ body{
     font-family: 'Gilam';
     background-color: theme-color(beige);
 }
-
-
-
-header.banner{
-    display: none;
-}
-
-.page-header{
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    
-    h1{
-        font-size: 4em;
-
-        &::selection {
-            background: theme-color(teal);
-            color: theme-color(white);
-        }
-    }
-}
