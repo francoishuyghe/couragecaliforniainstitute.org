@@ -43,6 +43,14 @@
         color: theme-color(white);
     }
 
+    #faq{
+        .question{
+            h4{
+                color: theme-color(blue);
+            }
+        }
+    }
+
     #about{
         background-color: theme-color(blue);
         color: theme-color(white);

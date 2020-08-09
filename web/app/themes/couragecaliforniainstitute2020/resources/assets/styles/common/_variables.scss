@@ -26,3 +26,15 @@ $navbar-light-toggler-icon-bg: none;
   font-style: normal;
   font-display: swap;
 }
+
+.drawer-wrap{
+  .drawer-content{
+    display: none;
+  }
+
+  &.active{
+    .drawer-content{
+      display: block;
+    }
+  }
+}

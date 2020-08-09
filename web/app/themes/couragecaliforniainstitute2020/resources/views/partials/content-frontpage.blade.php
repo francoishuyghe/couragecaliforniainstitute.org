@@ -26,6 +26,14 @@
 <section id="dates">
     <div class="container">
     <h3>{{ $data['key_dates']['title'] }}</h3>
+    <div class="wrap">
+        @foreach ($data['key_dates']['dates'] as $date)
+            <div class="date-wrap">
+                <div class="date">{{ $date['date']}}</div>
+                <div class="text">{{ $date['text'] }}</div>
+            </div>
+        @endforeach
+    </div>
     </div>
 </section>
 
@@ -36,7 +44,16 @@
                 <h3>{{ $data['faq']['title'] }}</h3>
             </div>
             <div class="col-md-8">
-                Questions
+                @foreach ($data['faq']['questions'] as $question)
+                <div class="question drawer-wrap">
+                    <div class="drawer-title">
+                        <h4>{{ $question['question'] }}</h4>
+                    </div>
+                    <div class="drawer-content">
+                        {!! $question['answer'] !!}
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
