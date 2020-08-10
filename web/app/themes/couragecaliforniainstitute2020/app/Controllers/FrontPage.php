@@ -11,6 +11,7 @@ class FrontPage extends Controller
     public function data() {
         $data['intro'] = get_field('intro');
         $data['register'] = get_field('register');
+        $data['track'] = get_field('track');
         $data['newsletter'] = get_field('newsletter');
         $data['key_dates'] = get_field('key_dates');
         $data['faq'] = get_field('faq');

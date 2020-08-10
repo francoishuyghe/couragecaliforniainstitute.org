@@ -4,7 +4,7 @@
     }
 
     #intro{
-        min-height: 70vh;
+        min-height: 80vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -14,7 +14,8 @@
         background-position: left top;
     }
 
-    #register{
+    #register,
+    #track{
         padding: 0;
         background-color: theme-color(blue);
 
@@ -33,6 +34,10 @@
         }
     }
 
+    #track{
+        background-color: transparent;
+    }
+
     #newsletter{
         background-color: theme-color(orange);
         text-align: center;
@@ -41,10 +46,60 @@
     #dates{
         background-color: theme-color(teal);
         color: theme-color(white);
+
+        h3{
+            text-align: center;
+        }
+
+        .container{
+            max-width: 500px;
+        }
+
+        .date-wrap{
+            border-bottom: 1px solid theme-color(black);
+            padding-bottom: $grid-gutter;
+            margin-bottom: $grid-gutter;
+
+            &:first-child{
+                padding-top: $grid-gutter;
+            }
+
+            &:last-child{
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .date{
+                font-size: 2em;
+            }
+        }
     }
 
     #faq{
         .question{
+            margin-bottom: $grid-gutter;
+
+            .drawer-title{
+                display: flex;
+                align-items: baseline;
+
+                &:before{
+                    content: "+";
+                    width: $grid-gutter;
+                    font-size: 2em;
+                    color: theme-color(blue);
+                    padding-top: 5px;
+                }
+            }
+
+            &.active{
+                .drawer-title{
+                    &:before{
+                        content: "-";
+                    }
+                }
+            }
+
             h4{
                 color: theme-color(blue);
             }

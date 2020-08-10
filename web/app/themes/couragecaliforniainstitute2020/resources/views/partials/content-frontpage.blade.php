@@ -10,10 +10,22 @@
         <div class="col-md-6 text">
             <div class="wrap">
                 <h3>{{ $data['register']['title'] }}</h3>
-                <a class="button">{{ $data['register']['button'] }}</a>
+                <a class="button" href="#">{{ $data['register']['button'] }}</a>
             </div>
         </div>
         <div class="col-md-6 image" style="background-image: url({{ $data['register']['image']['sizes']['large'] }})"></div>
+    </div>
+</section>
+
+<section id="track">
+    <div class="row">
+        <div class="col-md-6 image" style="background-image: url({{ $data['track']['image']['sizes']['large'] }})"></div>
+        <div class="col-md-6 text">
+            <div class="wrap">
+                <h3>{{ $data['track']['title'] }}</h3>
+                <a class="button" href="#">{{ $data['track']['button'] }}</a>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -28,9 +40,9 @@
     <h3>{{ $data['key_dates']['title'] }}</h3>
     <div class="wrap">
         @foreach ($data['key_dates']['dates'] as $date)
-            <div class="date-wrap">
-                <div class="date">{{ $date['date']}}</div>
-                <div class="text">{{ $date['text'] }}</div>
+            <div class="date-wrap row">
+                <div class="date col-md-4">{{ $date['date']}}</div>
+                <div class="text col-md-8">{{ $date['text'] }}</div>
             </div>
         @endforeach
     </div>

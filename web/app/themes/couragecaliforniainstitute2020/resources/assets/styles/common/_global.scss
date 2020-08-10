@@ -2,3 +2,11 @@ body{
     font-family: 'Gilam';
     background-color: theme-color(beige);
 }
+
+a.button{
+    background-color: theme-color(black);
+    color: theme-color(white);
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
