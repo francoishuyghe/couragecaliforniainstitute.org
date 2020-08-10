@@ -41,7 +41,9 @@
     <div class="wrap">
         @foreach ($data['key_dates']['dates'] as $date)
             <div class="date-wrap row">
-                <div class="date col-md-4">{{ $date['date']}}</div>
+                <div class="date col-md-4">
+                    <h4>{{ $date['date']}}</h4>
+                </div>
                 <div class="text col-md-8">{{ $date['text'] }}</div>
             </div>
         @endforeach

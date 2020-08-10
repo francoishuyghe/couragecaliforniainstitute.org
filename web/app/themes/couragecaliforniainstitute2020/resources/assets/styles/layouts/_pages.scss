@@ -12,6 +12,19 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: left top;
+
+        .container{
+            margin-left: 30%;
+        }
+
+        h2{
+            font-size: 3em;
+            color: theme-color(blue);
+        }
+
+        p{
+            font-size: 1.5em;
+        }
     }
 
     #register,
@@ -31,6 +44,12 @@
 
         .image{
             background-size: cover;
+        }
+    }
+
+    #register{
+        h3{
+            color: theme-color(orange);
         }
     }
 
@@ -77,19 +96,23 @@
 
     #faq{
         .question{
-            margin-bottom: $grid-gutter;
+            margin-bottom: $grid-gutter / 2;
 
             .drawer-title{
                 display: flex;
                 align-items: baseline;
+                color: theme-color(blue);
 
                 &:before{
                     content: "+";
-                    width: $grid-gutter;
+                    flex: 0 0 $grid-gutter;
                     font-size: 2em;
-                    color: theme-color(blue);
                     padding-top: 5px;
                 }
+            }
+
+            .drawer-content{
+                padding-left: $grid-gutter;
             }
 
             &.active{
@@ -98,10 +121,6 @@
                         content: "-";
                     }
                 }
-            }
-
-            h4{
-                color: theme-color(blue);
             }
         }
     }

@@ -11,4 +11,57 @@ header.banner{
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 99;
+  padding: 20px;
+
+  transition: .5s;
+
+  a.brand{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img{
+      width: 150px;
+
+      &.white{
+        display: none;
+      }
+    }
+  }
+}
+
+body.scrolled{
+  header.banner{
+    background-color: theme-color(black);
+    
+    li a{
+      color: theme-color(white);
+    }
+
+    a.brand{
+      img{
+        &.black{
+          display: none;
+        }
+        
+        &.white{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+nav.nav-primary{
+  li{
+    a{
+      color: theme-color(black);
+      text-transform: uppercase;
+    }
+
+    &:nth-child(3){
+      flex: 1;
+    }
+  }
 }

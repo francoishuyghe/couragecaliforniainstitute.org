@@ -1,12 +1,43 @@
 body{
-    font-family: 'Gilam';
+    font-family: proxima-nova, sans-serif;
     background-color: theme-color(beige);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Gilam';
+    margin-bottom: $grid-gutter / 2;
+}
+
 a.button{
+    font-family: 'Gilam';
     background-color: theme-color(black);
     color: theme-color(white);
     padding: 10px 20px;
     display: inline-block;
     text-transform: uppercase;
 }
+
+//Drawers
+.drawer-wrap{
+    .drawer-title{
+        cursor: pointer;
+
+        &:hover{
+            color: theme-color(orange);
+        }
+    }
+
+    .drawer-content{
+      display: none;
+    }
+  
+    &.active{
+      .drawer-content{
+        display: block;
+      }
+    }
+  }
