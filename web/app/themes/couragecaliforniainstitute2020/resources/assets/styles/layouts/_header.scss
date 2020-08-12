@@ -62,6 +62,7 @@ header.banner{
   }
 
   @include media-breakpoint-up(md){
+    display: block;
     height: auto;
     padding: 20px;
 
@@ -73,6 +74,10 @@ header.banner{
 
     .hamburger{
       display: none;
+    }
+
+    .nav{
+      flex-flow: row;
     }
   }
 
