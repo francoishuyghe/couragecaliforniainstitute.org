@@ -10,7 +10,7 @@
         <div class="col-md-6 text">
             <div class="wrap">
                 <h3>{{ $data['register']['title'] }}</h3>
-                <a class="button" href="#registerForm">{{ $data['register']['button'] }}</a>
+                <a id="registerLink" class="button" href="#registerForm">{{ $data['register']['button'] }}</a>
             </div>
         </div>
         <div class="col-md-6 image" style="background-image: url({{ $data['register']['image']['sizes']['large'] }})"></div>

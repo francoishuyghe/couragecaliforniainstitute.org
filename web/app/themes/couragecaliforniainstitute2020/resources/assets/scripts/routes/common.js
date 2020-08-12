@@ -23,6 +23,11 @@ export default {
     $('.nav a').click(function () { 
       $('header.banner').removeClass('active');
     });
+
+    //Register drawer
+    $('#registerLink').click(function () { 
+      $('#registerForm').toggleClass('active');
+    })
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
