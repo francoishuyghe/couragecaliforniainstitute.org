@@ -12,15 +12,16 @@ header.banner{
   left: 0;
   width: 100%;
   z-index: 99;
-  padding: 20px;
+  padding: 10px;
+  height: 70px;
+  overflow: hidden;
+  transition: .25s;
 
-  transition: .5s;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 
   a.brand{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-
     img{
       width: 150px;
 
@@ -29,13 +30,59 @@ header.banner{
       }
     }
   }
+
+  .nav{
+    flex-flow: column;
+  }
+
+  .hamburger{
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  &.active{
+    height: 100vh;
+    background-color: theme-color(black);
+    
+    a.brand{
+      img{
+        &.black{
+          display: none;
+        }
+        
+        &.white{
+          display: block;
+        }
+      }
+    }
+
+    a{
+      color: theme-color(white);
+    }
+  }
+
+  @include media-breakpoint-up(md){
+    height: auto;
+    padding: 20px;
+
+    a.brand{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hamburger{
+      display: none;
+    }
+  }
+
 }
 
 body.scrolled{
   header.banner{
     background-color: theme-color(black);
     
-    li a{
+    a{
       color: theme-color(white);
     }
 
@@ -54,11 +101,12 @@ body.scrolled{
 }
 
 nav.nav-primary{
+  a{
+    color: theme-color(black);
+    text-transform: uppercase;
+  }
+
   li{
-    a{
-      color: theme-color(black);
-      text-transform: uppercase;
-    }
 
     &:nth-child(3){
       flex: 1;

@@ -15,6 +15,14 @@ export default {
         $('body').removeClass('scrolled');
       }
     })
+
+    //Hamburger menu
+    $('.hamburger').click(function () { 
+      $('header.banner').toggleClass('active');
+    });
+    $('.nav a').click(function () { 
+      $('header.banner').removeClass('active');
+    });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
