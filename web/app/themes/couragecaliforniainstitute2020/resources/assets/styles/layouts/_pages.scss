@@ -1,5 +1,5 @@
 .page.home{
-    section{
+    main section{
         padding: $grid-gutter 0;
         
         @include media-breakpoint-up(md){
@@ -52,11 +52,11 @@
     #track{
         padding: 0;
         background-color: theme-color(blue);
+        overflow: hidden;
 
         .text{
             display: flex;
             align-items: center;
-            min-height: 500px;
 
             .wrap{
                 padding: $grid-gutter;
@@ -65,6 +65,7 @@
 
         .image{
             background-size: cover;
+            min-height: 500px;
         }
     }
 

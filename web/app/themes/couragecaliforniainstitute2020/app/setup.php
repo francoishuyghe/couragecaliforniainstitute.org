@@ -87,11 +87,11 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
+        'name'          => __('Footer Right', 'sage'),
         'id'            => 'footer-right'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
+        'name'          => __('Footer Left', 'sage'),
         'id'            => 'footer-left'
     ] + $config);
 });

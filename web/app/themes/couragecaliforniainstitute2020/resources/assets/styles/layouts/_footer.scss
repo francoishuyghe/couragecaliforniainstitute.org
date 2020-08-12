@@ -2,4 +2,31 @@ footer{
     background-color: theme-color(black);
     color: theme-color(white);
     padding: $grid-gutter 0;
+
+    section{
+        margin-bottom: 20px;
+    }
+
+    img{
+        width: 200px;
+    }
+
+    .textwidget{
+        font-size: .8em;
+        color: transparentize($color: #ffffff, $amount: .5)
+    }
+
+    li{
+        list-style: none;
+
+        a{
+            color: theme-color(white);
+            text-transform: uppercase;
+
+            i{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
 }
