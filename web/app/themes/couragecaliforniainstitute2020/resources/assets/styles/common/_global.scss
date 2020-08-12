@@ -28,6 +28,14 @@ a.button{
     }
 }
 
+.underlined{
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    white-space: nowrap;
+    padding-bottom: 1px;
+}
+
 //Drawers
 .drawer-wrap{
     .drawer-title{

@@ -1,6 +1,6 @@
 <section id="intro" style="background-image: url({{ $data['intro']['image']['sizes']['large'] }})">
     <div class="container">
-        <h2>{{ $data['intro']['title'] }}</h2>
+        <h2>{!! $data['intro']['title'] !!}</h2>
         <p>{{ $data['intro']['text'] }}</p>
     </div>
 </section>
@@ -35,7 +35,7 @@
 
 <section id="newsletter">
     <div class="container">
-        <h3>{{ $data['newsletter']['text'] }}</h3>
+        <h3>{!! $data['newsletter']['text'] !!}</h3>
         @include('partials.newsletter-signup')
     </div>
 </section>
