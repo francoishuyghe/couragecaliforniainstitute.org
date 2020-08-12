@@ -10,11 +10,15 @@
         <div class="col-md-6 text">
             <div class="wrap">
                 <h3>{{ $data['register']['title'] }}</h3>
-                <a class="button" href="#">{{ $data['register']['button'] }}</a>
+                <a class="button" href="#registerForm">{{ $data['register']['button'] }}</a>
             </div>
         </div>
         <div class="col-md-6 image" style="background-image: url({{ $data['register']['image']['sizes']['large'] }})"></div>
     </div>
+</section>
+
+<section id="registerForm">
+    @include('partials.register-form')
 </section>
 
 <section id="track">
@@ -23,7 +27,7 @@
         <div class="col-md-6 text">
             <div class="wrap">
                 <h3>{{ $data['track']['title'] }}</h3>
-                <a class="button" href="#">{{ $data['track']['button'] }}</a>
+                <a class="button" href="{{ $data['track']['button_link'] }}" target="_blank">{{ $data['track']['button'] }}</a>
             </div>
         </div>
     </div>
@@ -32,6 +36,7 @@
 <section id="newsletter">
     <div class="container">
         <h3>{{ $data['newsletter']['text'] }}</h3>
+        @include('partials.newsletter-signup')
     </div>
 </section>
 

@@ -1,5 +1,6 @@
 body{
     font-family: proxima-nova, sans-serif;
+    font-size: 18px;
     background-color: theme-color(beige);
 }
 
@@ -19,6 +20,12 @@ a.button{
     padding: 10px 20px;
     display: inline-block;
     text-transform: uppercase;
+    transition: .25s;
+
+    &:hover{
+        text-decoration: none;
+        background-color: theme-color(orange);
+    }
 }
 
 //Drawers

@@ -8,17 +8,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
+        margin-top: $grid-gutter;
 
         background-repeat: no-repeat;
         background-size: contain;
         background-position: left top;
 
-        .container{
-            margin-left: 30%;
-        }
-
         h2{
-            font-size: 3em;
+            font-size: 3.5em;
             color: theme-color(blue);
         }
 
@@ -55,6 +53,11 @@
 
     #track{
         background-color: transparent;
+    }
+
+    #registerForm{
+        padding:0;
+        line-height: 0;
     }
 
     #newsletter{
