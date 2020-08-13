@@ -31,12 +31,17 @@ header.banner{
     }
   }
 
+  .nav-primary{
+    flex: 0 0 100%;
+  }
+
   .nav{
     flex-flow: column;
   }
 
   .hamburger{
     font-size: 30px;
+    color: theme-color(black);
     cursor: pointer;
   }
 
@@ -114,8 +119,11 @@ nav.nav-primary{
   a{
     color: theme-color(black);
     text-transform: uppercase;
-    font-size: .8em;
     transition: .25s;
+
+    @include media-breakpoint-up(md){
+      font-size: .8em;
+    }
 
     &:hover{
       color: theme-color(orange);

@@ -14,7 +14,7 @@
         text-align: center;
 
         background-repeat: no-repeat;
-        background-size: 60%;
+        background-size: 80%;
         background-position: left bottom;
 
         h2{
@@ -65,13 +65,21 @@
 
         .image{
             background-size: cover;
-            min-height: 500px;
+            min-height: 200px;
+
+            @include media-breakpoint-up(md){
+                min-height: 500px;
+            }
         }
     }
 
     #register{
         h3{
             color: theme-color(orange);
+        }
+
+        .row{
+            flex-flow: column-reverse;
         }
     }
 
@@ -113,6 +121,12 @@
             display: flex;
             align-items: baseline;
             justify-content: center;
+            align-items: center;
+            flex-flow: column;
+
+            @include media-breakpoint-up(md){
+                flex-flow: row;
+            }
 
             input[type="text"]{
                 border: 0;
@@ -122,6 +136,8 @@
                 margin-right: 10px;
                 flex: 1;
                 max-width: 500px;
+                width: 100%;
+                margin-bottom: 20px;
 
                 &:focus{
                     outline: 0;
@@ -192,6 +208,10 @@
     #faq{
         .question{
             margin-bottom: $grid-gutter / 2;
+
+            h4{
+                margin-bottom: 0;
+            }
 
             .drawer-title{
                 display: flex;

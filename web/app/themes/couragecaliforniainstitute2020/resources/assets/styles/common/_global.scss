@@ -14,7 +14,10 @@ h1, h2, h3, h4{
 }
 
 h3{
-    font-size: 2em;
+
+    @include media-breakpoint-up(md){
+        font-size: 2em;
+    }
 }
 
 a.button{
