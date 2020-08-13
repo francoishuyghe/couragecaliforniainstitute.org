@@ -14,8 +14,8 @@
         text-align: center;
 
         background-repeat: no-repeat;
-        background-size: 80%;
-        background-position: left bottom;
+        background-size: auto 60%;
+        background-position: center bottom;
 
         h2{
             font-size: 2.2em;
@@ -35,8 +35,8 @@
             align-items: center;
             justify-content: center;
 
-            background-size: contain;
-            background-position: left top;
+            background-size: 50%;
+            background-position: left bottom;
 
             .container{
                 max-width: 50%;
@@ -52,7 +52,12 @@
             }
         }
 
+        @include media-breakpoint-up(lg){
+            background-size: contain;
+        }
+
         @include media-breakpoint-up(xl){
+
             .container{
                 max-width: none;
                 margin-left: 25%;
@@ -90,6 +95,10 @@
         h3{
             color: theme-color(orange);
         }
+    }
+
+    #track{
+        background-color: transparent;
 
         .row{
             flex-flow: column-reverse;
@@ -98,10 +107,6 @@
                 flex-flow: row;
             }
         }
-    }
-
-    #track{
-        background-color: transparent;
     }
 
     #registerForm{
