@@ -38,6 +38,9 @@
     <div class="container">
         <h3>{!! $data['newsletter']['text'] !!}</h3>
         @include('partials.newsletter-signup')
+        <div class="success">
+            {{ $data['newsletter']['success_message']}}
+        </div>
     </div>
 </section>
 

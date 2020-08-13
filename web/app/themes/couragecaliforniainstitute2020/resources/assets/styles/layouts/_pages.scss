@@ -138,6 +138,20 @@
             background-image: url(../images/underline-white.svg);
         }
 
+        .success{
+            opacity: 0;
+            height: 1em;
+            transition: .25s;
+            visibility: hidden;
+        }
+
+        &.active{
+            .success{
+                opacity: 1;
+                visibility: visible;
+            }   
+        }
+
         .form-wrap{
             display: flex;
             align-items: baseline;
@@ -146,7 +160,14 @@
             flex-flow: column;
 
             @include media-breakpoint-up(md){
-                flex-flow: row;
+                flex-flow: row wrap;
+            }
+
+            #ak-errors{
+                order: 1;
+                flex: 0 0 100%;
+                color: red;
+                list-style: none;
             }
 
             input[type="text"]{
