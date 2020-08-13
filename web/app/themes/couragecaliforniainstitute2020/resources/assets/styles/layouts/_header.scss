@@ -90,6 +90,10 @@ body.scrolled{
     
     a{
       color: theme-color(white);
+
+      &:hover{
+        color: theme-color(orange);
+      }
     }
 
     a.brand{
@@ -111,6 +115,16 @@ nav.nav-primary{
     color: theme-color(black);
     text-transform: uppercase;
     font-size: .8em;
+    transition: .25s;
+
+    &:hover{
+      color: theme-color(orange);
+    }
+
+    i{
+      display: inline-block;
+      margin-left: 10px;
+    }
   }
 
   li{
