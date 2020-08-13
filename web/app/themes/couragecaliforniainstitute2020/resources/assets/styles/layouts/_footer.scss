@@ -15,7 +15,7 @@ footer{
         flex-flow: column-reverse;
 
         @include media-breakpoint-up(md){
-            flex-flow: column;
+            flex-flow: row;
         }
     }
     

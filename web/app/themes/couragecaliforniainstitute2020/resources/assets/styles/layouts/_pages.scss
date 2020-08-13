@@ -80,6 +80,10 @@
 
         .row{
             flex-flow: column-reverse;
+
+            @include media-breakpoint-up(md){
+                flex-flow: row;
+            }
         }
     }
 
