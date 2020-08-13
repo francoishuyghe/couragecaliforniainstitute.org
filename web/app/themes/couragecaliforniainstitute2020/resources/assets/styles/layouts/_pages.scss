@@ -96,11 +96,15 @@
         transition: .5s;
 
         &.active{
-            height:1600px;
+            height:1700px;
             display: flex;
             flex-flow: column;
             align-items: center;
             justify-content: center;
+
+            @include media-breakpoint-up(md){
+                height:1600px;
+            }
 
             iframe{
                 height: auto;
