@@ -38,12 +38,24 @@
             background-size: contain;
             background-position: left top;
 
+            .container{
+                max-width: 50%;
+                margin-right: $grid-gutter;
+            }
+
             h2{
                 font-size: 3.5em;
             }
     
             p{
                 font-size: 1.5em;
+            }
+        }
+
+        @include media-breakpoint-up(xl){
+            .container{
+                max-width: 720px;
+                margin-right: $grid-gutter * 2;
             }
         }
     }
