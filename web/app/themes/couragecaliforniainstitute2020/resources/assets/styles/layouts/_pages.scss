@@ -54,8 +54,9 @@
 
         @include media-breakpoint-up(xl){
             .container{
-                max-width: 720px;
-                margin-right: $grid-gutter * 2;
+                max-width: none;
+                margin-left: 25%;
+                margin-right: $grid-gutter;
             }
         }
     }
