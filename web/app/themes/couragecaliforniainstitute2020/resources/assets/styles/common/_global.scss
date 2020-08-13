@@ -39,6 +39,19 @@ a.button{
     padding-bottom: 1px;
 }
 
+//Menu Items
+.menu{
+    li{
+        a{
+
+        }
+
+        &.donate a{
+            color: theme-color(orange);
+        }
+    }
+}
+
 //Drawers
 .drawer-wrap{
     .drawer-title{
