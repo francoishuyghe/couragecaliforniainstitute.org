@@ -13,6 +13,10 @@ h1, h2, h3, h4{
     margin-bottom: $grid-gutter / 2;
 }
 
+h3{
+    font-size: 2em;
+}
+
 a.button{
     font-family: 'Gilam';
     background-color: theme-color(black);

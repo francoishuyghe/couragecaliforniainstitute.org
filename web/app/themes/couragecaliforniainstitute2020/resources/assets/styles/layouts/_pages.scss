@@ -81,13 +81,23 @@
 
     #registerForm{
         height: 0;
+        background-color: theme-color(white);
         overflow: hidden;
         padding:0;
         line-height: 0;
         transition: .5s;
 
         &.active{
-            height:650px;
+            height:1600px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            iframe{
+                height: auto;
+                margin-bottom: $grid-gutter / 2;
+            }
         }
     }
 
@@ -144,6 +154,7 @@
 
         h3{
             text-align: center;
+            color: theme-color(black);
         }
 
         .container{

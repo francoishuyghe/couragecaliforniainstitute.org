@@ -25,7 +25,7 @@ export default {
     });
 
     //Register drawer
-    $('#registerLink').click(function () { 
+    $('.registerLink').click(function () { 
       $('#registerForm').toggleClass('active');
     })
   },
