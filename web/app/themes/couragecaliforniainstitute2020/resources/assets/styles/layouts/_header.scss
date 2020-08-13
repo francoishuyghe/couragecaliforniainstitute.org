@@ -52,6 +52,14 @@ header.banner{
         margin-top: $grid-gutter;
         background-color: theme-color(orange);
       }
+
+      @include media-breakpoint-up(xl){
+        margin-bottom: 0;
+
+        &:after{
+          display: none;
+        }
+      }
     }
   }
 
@@ -149,7 +157,7 @@ nav.nav-primary{
     text-transform: uppercase;
     transition: .25s;
 
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(xl){
       font-size: .8em;
     }
 
