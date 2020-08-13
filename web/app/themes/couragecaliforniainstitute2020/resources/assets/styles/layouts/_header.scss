@@ -37,17 +37,45 @@ header.banner{
 
   .nav{
     flex-flow: column;
+    align-items: center;
+
+    li:nth-child(3){
+      flex: 1;
+      margin-bottom: $grid-gutter;
+
+      &:after{
+        display: block;
+        content: '';
+        width: $grid-gutter;
+        height: 2px;
+        margin: auto;
+        margin-top: $grid-gutter;
+        background-color: theme-color(orange);
+      }
+    }
   }
 
   .hamburger{
     font-size: 30px;
     color: theme-color(black);
     cursor: pointer;
+
+    .fa-times{
+      display: none;
+    }
   }
 
   &.active{
     height: 100vh;
     background-color: theme-color(black);
+
+    .fa-times{
+      display: inline-block;
+    }
+
+    .fa-bars{
+      display: none;
+    }
     
     a.brand{
       img{
