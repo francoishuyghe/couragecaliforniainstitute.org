@@ -1,8 +1,8 @@
-<script src="http://act.couragecampaign.org/resources/actionkit.js"></script>
+<script src="https://act.couragecampaign.org/resources/actionkit.js"></script>
 <script type="text/javascript">actionkit.forms.initPage()</script>
     
     
-    <form class="action_form" name="act" method="POST" action="http://act.couragecampaign.org/act/" accept-charset="utf-8">
+    <form class="action_form" name="act" method="POST" action="https://act.couragecampaign.org/act/" accept-charset="utf-8">
       <div class="form-wrap">
     <input type="hidden" name="utf8" value="&#x2714;">
     
@@ -34,6 +34,6 @@
     
     
     <script type="text/javascript">
-    actionkit.forms.contextRoot = 'http://act.couragecampaign.org/context/';
+    actionkit.forms.contextRoot = 'https://act.couragecampaign.org/context/';
     actionkit.forms.initForm('act');
     </script>
