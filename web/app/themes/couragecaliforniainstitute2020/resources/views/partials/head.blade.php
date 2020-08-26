@@ -6,8 +6,9 @@
   {{-- Font Awesome --}}
   <script src="https://kit.fontawesome.com/667efd8f5c.js" crossorigin="anonymous"></script>
 
-  {{-- Proxima Nova --}}
-  <link rel="stylesheet" href="https://use.typekit.net/tas3jus.css">
+  {{-- Google Font --}}
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
 
   <!-- Hotjar Tracking Code for https://couragecaliforniainstitute.org/ -->
 <script>
