@@ -4,7 +4,8 @@ export default {
 
     //Drawer interactions
     $('.drawer-title').click(function () { 
-      $(this).parent('.drawer-wrap').toggleClass('active');
+      $('.drawer-wrap.active').removeClass('active');
+      $(this).parent('.drawer-wrap').addClass('active');
     })
 
     //Check page scroll
