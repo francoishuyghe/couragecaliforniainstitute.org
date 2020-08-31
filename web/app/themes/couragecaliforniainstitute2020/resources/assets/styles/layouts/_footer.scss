@@ -23,42 +23,65 @@ footer{
         width: 200px;
     }
     
-    .textwidget{
-        font-size: .8em;
-        color: transparentize($color: #ffffff, $amount: .5)
-    }
-    
-    .menu-footer-container{
-        display: flex;
-
-        @include media-breakpoint-up(md){
-            justify-content: flex-end;
+    //Left Footer
+    #leftFooter{
+        .textwidget{
+            font-size: .7em;
+            color: transparentize($color: #ffffff, $amount: .7)
         }
     }
 
-    #menu-footer{
-        padding-left: 0;
+    //Right Footer
+    #rightFooter{
+        .textwidget{
+            font-size: .9em;
+        }
+
+        #menu-footer{
+            padding-left: 0;
+
+            li{
+                list-style: none;
+    
+                a{
+                    color: theme-color(white);
+                    text-transform: uppercase;
+                    
+                    @include media-breakpoint-up(md){
+                        font-size: .8em;
+                    }
+    
+                    i{
+                        display: inline-block;
+                        margin-left: 10px;
+                    }
+    
+                    &:hover{
+                        text-decoration: none;
+                        color: theme-color(orange);
+                    }
+                }
+            }
+        }
     }
 
-    li{
-        list-style: none;
+    //Newsletter Form
+    #newsletterFooter{
+        padding: 0 $grid-gutter;
 
-        a{
-            color: theme-color(white);
-            text-transform: uppercase;
-            
-            @include media-breakpoint-up(md){
-                font-size: .8em;
-              }
+        h4{
+            color: theme-color(orange);
+        }
 
-            i{
-                display: inline-block;
-                margin-left: 10px;
-            }
-
-            &:hover{
-                text-decoration: none;
-                color: theme-color(orange);
+        .form-wrap{
+            input[name="email"]{
+                color: theme-color(white);
+                border-bottom-color: theme-color(white);
+    
+                &::placeholder {
+                    color: theme-color(grey);
+                    opacity: 1;
+                }
             }
         }
     }

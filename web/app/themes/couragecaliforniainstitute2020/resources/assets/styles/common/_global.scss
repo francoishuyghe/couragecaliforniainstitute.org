@@ -9,12 +9,6 @@ h1, h2, h3, h4{
     margin-bottom: $grid-gutter / 2;
 }
 
-h3{
-
-    @include media-breakpoint-up(md){
-        font-size: 2em;
-    }
-}
 
 a.button{
     font-family: 'Gilam';
@@ -37,6 +31,13 @@ a.button{
     background-size: contain;
     white-space: nowrap;
     padding-bottom: 1px;
+}
+
+//Grid
+@media (min-width: 1200px){
+    main .container {
+        max-width: 900px;
+    }
 }
 
 //Menu Items
@@ -72,3 +73,58 @@ a.button{
       }
     }
   }
+
+  //Newsletter Form
+
+.form-wrap{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    @include media-breakpoint-up(md){
+        flex-flow: row wrap;
+    }
+
+    #ak-errors{
+        order: 1;
+        flex: 0 0 100%;
+        color: red;
+        list-style: none;
+    }
+
+    input[type="text"]{
+        border: 0;
+        border-bottom: 2px solid black;
+        background-color: transparent;
+        padding: 10px 20px;
+        margin-right: 10px;
+        flex: 1;
+        max-width: 500px;
+        width: 100%;
+        margin-bottom: 20px;
+
+        &:focus{
+            outline: 0;
+        }
+
+        &::placeholder{
+            color: transparentize($color: #000000, $amount: .4);
+        }
+
+        &:-internal-autofill-selected{
+            background-color: transparent!important;
+        }
+    }
+
+    input[type="submit"]{
+        background-color: theme-color(blue);
+        color: theme-color(white);
+        text-transform: uppercase;
+        border: 0;
+        border-radius: 0;
+        outline: 0;
+        padding: 10px 20px;
+    }
+}

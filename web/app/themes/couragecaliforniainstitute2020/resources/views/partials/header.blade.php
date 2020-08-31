@@ -1,5 +1,5 @@
 <header class="banner">
-    <a class="brand" href="#">
+    <a class="brand" href="/#">
       <img src="@asset('images/logo_black.png')" class="black"/>
       <img src="@asset('images/logo_white.png')" class="white"/>
     </a>
