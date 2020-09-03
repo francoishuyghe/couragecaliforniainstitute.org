@@ -14,3 +14,6 @@
     </div>
   </div>
 </footer>
+
+{{-- iFrame Resizer --}}
+<script type="text/javascript">iFrameResize({ log:true, checkOrigin:false});</script>

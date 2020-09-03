@@ -9,6 +9,9 @@
   {{-- Google Font --}}
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
+  {{-- iFrame resizer --}}
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js" ></script>
+
 
   <!-- Hotjar Tracking Code for https://couragecaliforniainstitute.org/ -->
 <script>

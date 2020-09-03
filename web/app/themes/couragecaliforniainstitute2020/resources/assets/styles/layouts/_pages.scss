@@ -1,12 +1,13 @@
 .page{
  .main{
-    margin: 150px auto 100px;
+    padding: 150px 0 100px;
+    min-height: 100vh;
  }
 }
 
 .page.home{
     main{
-        margin: 0;
+        padding: 0;
 
         section{
             padding: $grid-gutter 0;
@@ -285,6 +286,18 @@
             li{
                 margin-bottom: .5em;
             }
+        }
+    }
+}
+
+// Voter Tools
+.page.voter-tools{
+    .action{
+        display: none;
+
+        &.active{
+            display: block;
+            padding: $grid-gutter 0;
         }
     }
 }
