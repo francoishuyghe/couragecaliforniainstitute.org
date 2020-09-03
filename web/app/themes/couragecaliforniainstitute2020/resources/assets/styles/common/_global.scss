@@ -128,3 +128,45 @@ a.button{
         padding: 10px 20px;
     }
 }
+
+//Popup
+#sgpb-popup-dialog-main-div{
+    background-color: theme-color(orange)!important;
+    margin-bottom: 0!important;
+    padding: $grid-gutter!important;
+    border-radius: 0!important;
+    border: 0!important;
+    box-shadow: 0 0!important;
+
+    form{
+        p{
+            margin-bottom: 0;
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        input{
+            margin-bottom: 0;
+        }
+
+        input[name="email"]{
+            border: 1px solid theme-color(black);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input[class="submitform"]{
+            margin-left: 10px;
+        }
+    }
+}
+
+.sgpb-popup-close-button-1{
+    top: 9px;
+    bottom: auto!important;
+}
+
+.sgpb-theme-1-overlay{
+    background: none;
+}
