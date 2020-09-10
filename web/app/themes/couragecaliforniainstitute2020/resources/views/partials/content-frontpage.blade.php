@@ -10,16 +10,11 @@
         <div class="col-md-6 text">
             <div class="wrap">
                 <h3>{{ $data['register']['title'] }}</h3>
-                <a class="button registerLink" href="#registerForm">{{ $data['register']['button'] }}</a>
+                <a class="button" href="/voter-tools">{{ $data['register']['button'] }}</a>
             </div>
         </div>
         <div class="col-md-6 image" style="background-image: url({{ $data['register']['image']['sizes']['large'] }})"></div>
     </div>
-</section>
-
-<section id="registerForm">
-    @include('partials.register-form')
-    <a href="#register" class="center registerLink">Close this form</a>
 </section>
 
 <section id="track">

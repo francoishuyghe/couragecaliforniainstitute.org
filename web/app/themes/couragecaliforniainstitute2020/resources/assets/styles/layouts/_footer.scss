@@ -2,9 +2,11 @@ footer{
     background-color: theme-color(black);
     color: theme-color(white);
     padding: $grid-gutter / 2 0;
+    text-align: center;
     
     @include media-breakpoint-up(md){
         padding: $grid-gutter 0;
+        text-align: left;
     }
 
     section{
@@ -12,19 +14,29 @@ footer{
     }
 
     .row{
-        flex-flow: column-reverse;
+        flex-flow: column;
 
         @include media-breakpoint-up(md){
             flex-flow: row;
         }
     }
     
-    img{
-        width: 200px;
-    }
-    
     //Left Footer
     #leftFooter{
+        margin-bottom: $grid-gutter;
+
+        @include media-breakpoint-up(md){
+            margin-bottom: 0;
+        }
+
+        img{
+            width: 150px;
+    
+            @include media-breakpoint-up(md){
+                width: 200px;
+            }
+        }
+
         .textwidget{
             font-size: .7em;
             color: transparentize($color: #ffffff, $amount: .7)
@@ -33,6 +45,12 @@ footer{
 
     //Right Footer
     #rightFooter{
+        display: none;
+
+        @include media-breakpoint-up(md){
+            display: block;
+        }
+
         .textwidget{
             font-size: .9em;
         }
@@ -71,6 +89,7 @@ footer{
 
         h4{
             color: theme-color(orange);
+            font-size: 1em;
         }
 
         .form-wrap{
