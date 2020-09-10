@@ -4,9 +4,11 @@ export default {
 
     $('.action-link').click(function (event) {
       let target = $(event.target).attr('href');
-      console.log(target);
       $('.action.active').removeClass('active');
+      $('.action-link.active').removeClass('active');
       $(target).addClass('active');
+      $(event.target).addClass('active');
+      event.preventDefault();
     });
   },
 };

@@ -264,10 +264,18 @@
     }
 }
 
+// PAGE ABOUT
+
 .page.about{
     background-color: theme-color(blue);
     color: theme-color(white);
     @extend .scrolled;
+
+    @media (min-width: 1200px){
+        main .container {
+            max-width: 900px;
+        }
+    }
 
     main{
         h1, h2{
@@ -292,12 +300,49 @@
 
 // Voter Tools
 .page.voter-tools{
+    h1,
+    #top{
+        text-align: center;
+    }
+
+    #tools{
+        margin-top: $grid-gutter;
+    }
+
+    .action-links{
+        margin-bottom: $grid-gutter;
+    }
+
+    .action-link{
+        display: block;
+        background: theme-color(grey);
+        color: theme-color(white);
+        font-weight: 600;
+        padding: 1em;
+        padding-right: 3em;
+        margin-bottom: 10px;
+
+        &.active{
+            background: theme-color(blue);
+        }
+
+        &:hover{
+            background: theme-color(orange);
+            text-decoration: none;
+        }
+
+        &:after{
+            content: "►";
+            position: absolute;
+            right: 2em;
+        }
+    }
+
     .action{
         display: none;
 
         &.active{
             display: block;
-            padding: $grid-gutter 0;
         }
     }
 }
