@@ -321,6 +321,7 @@
         padding: 1em;
         padding-right: 3em;
         margin-bottom: 10px;
+        position: relative;
 
         &.active{
             background: theme-color(blue);
@@ -335,6 +336,8 @@
             content: "►";
             position: absolute;
             right: 2em;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 

@@ -90,17 +90,23 @@ footer{
         h4{
             color: theme-color(orange);
             font-size: 1em;
+            margin-bottom: 10px;
         }
 
         .form-wrap{
             input[name="email"]{
                 color: theme-color(white);
                 border-bottom-color: theme-color(white);
+                text-align: center;
     
                 &::placeholder {
                     color: theme-color(grey);
                     opacity: 1;
                 }
+            }
+
+            input[type="submit"]{
+                font-size: .8em;
             }
         }
     }

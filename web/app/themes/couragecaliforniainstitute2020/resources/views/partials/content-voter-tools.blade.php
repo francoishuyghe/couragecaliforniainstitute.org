@@ -4,12 +4,12 @@
 
 <section id="tools">
     <div class="row">
-        <div class="col-md-4 action-links">
+        <div class="col-lg-4 action-links">
             <a href="#register" class="action-link active">Register to vote</a>
             <a href="#verify" class="action-link">Check your Voter Registration</a>
             <a href="#absentee" class="action-link">Request an Absentee Ballot</a>
         </div>
-        <div class="col-md-8 actions">
+        <div class="col-lg-8 actions">
             <div id="register" class="action active">
                 <iframe src="https://register.vote.org/?partner=838814" width="100%" marginheight="0" frameborder="0" id="frame1" scrollable="no"></iframe>
             </div>
