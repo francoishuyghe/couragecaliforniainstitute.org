@@ -261,6 +261,14 @@
         h3{
             color: theme-color(orange);
         }
+
+        .button{
+            background-color: theme-color(orange);
+
+            &:hover{
+                background-color: theme-color(black);
+            }
+        }
     }
 }
 

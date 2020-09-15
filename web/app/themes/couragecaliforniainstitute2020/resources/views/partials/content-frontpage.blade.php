@@ -81,5 +81,6 @@
     <div class="container">
         <h3>{{ $data['about']['title'] }}</h3>
         {!! $data['about']['text'] !!}
+        <a class="button" href="/about">Learn More</a>
     </div>
 </section>
