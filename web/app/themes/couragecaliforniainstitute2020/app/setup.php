@@ -134,3 +134,13 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+
+// Add a cookie to display popup
+$visit_time = date('F j, Y  g:i a');
+     
+if(!isset($_COOKIE[$popup_visit_time])) {
+    // set a cookie for 1 day
+    setcookie('popup_visit_time', $visit_time, time()+86400);
+}
+    
