@@ -8,6 +8,7 @@
             <a href="#register" class="action-link active">Register to vote</a>
             <a href="#verify" class="action-link">Check your Voter Registration</a>
             <a href="#absentee" class="action-link">Request an Absentee Ballot</a>
+            <a href="#reminders" class="action-link">Get Reminders</a>
         </div>
         <div class="col-lg-8 actions">
             <div id="register" class="action active">
@@ -18,6 +19,9 @@
             </div>
             <div id="absentee" class="action">
                 <iframe src="https://absentee.vote.org/?partner=838814" width="100%" marginheight="0" frameborder="0" id="frame3" scrollable="no"></iframe>
+            </div>
+            <div id="reminders" class="action">
+                <iframe src="https://reminders.vote.org/?partner=838814" width="100%" marginheight="0" frameborder="0" id="frame4" scrollable="no"></iframe>
             </div>
         </div>
     </div>
