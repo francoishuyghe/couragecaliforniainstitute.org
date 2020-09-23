@@ -148,6 +148,10 @@ a.button{
     
     .sg-popup-builder-content{
         padding: $grid-gutter / 2;
+
+        .sgpb-popup-builder-content-html{
+            width: 100%;
+        }
         
         @include media-breakpoint-up(md){
             padding: $grid-gutter * 2;
