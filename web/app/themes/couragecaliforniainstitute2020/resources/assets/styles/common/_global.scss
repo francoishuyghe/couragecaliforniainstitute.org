@@ -134,6 +134,7 @@ a.button{
 //Popup
 #sgpb-popup-dialog-main-div{
     //margin-bottom: 0!important;
+    width: 100%;
     background-color: theme-color(black)!important;
     color: theme-color(white)!important;
     border-radius: 0!important;
@@ -152,6 +153,11 @@ a.button{
             padding: $grid-gutter * 2;
             display: flex;
             align-items: center;
+
+            h2, p{
+                max-width: 500px;
+                margin: 0 auto 20px;
+            }
         }
 
         h2{
@@ -162,9 +168,12 @@ a.button{
     form{
         background: theme-color(white);
         padding: $grid-gutter / 2;
-        max-width: 400px;
-        margin: auto;
         border-radius: 10px;
+
+        @include media-breakpoint-up(md){
+            max-width: 400px;
+            margin: auto;
+        }
 
         h3{
             color: theme-color(black);
@@ -198,8 +207,8 @@ a.button{
 }
 
 .sgpb-popup-close-button-1{
-    right: 30px!important;
-    top: 15px;
+    right: 40px!important;
+    top: 25px;
     bottom: auto!important;
 }
 
