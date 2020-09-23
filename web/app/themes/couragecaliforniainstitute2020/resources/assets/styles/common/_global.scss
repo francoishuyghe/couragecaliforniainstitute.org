@@ -73,7 +73,7 @@ a.button{
 
   //Newsletter Form
 
-.form-wrap{
+.newsletter-form .form-wrap{
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -83,6 +83,9 @@ a.button{
     @include media-breakpoint-up(md){
         flex-flow: row wrap;
     }
+}
+
+.form-wrap{
 
     #ak-errors{
         order: 1;
@@ -91,6 +94,8 @@ a.button{
         list-style: none;
     }
 
+    input[type="email"],
+    input[type="tel"],
     input[type="text"]{
         border: 0;
         border-bottom: 2px solid black;
@@ -128,17 +133,46 @@ a.button{
 
 //Popup
 #sgpb-popup-dialog-main-div{
-    background-color: theme-color(orange)!important;
-    margin-bottom: 0!important;
-    padding: $grid-gutter!important;
+    //margin-bottom: 0!important;
+    background-color: theme-color(black)!important;
+    color: theme-color(white)!important;
     border-radius: 0!important;
     border: 0!important;
     box-shadow: 0 0!important;
+    
+    @include media-breakpoint-up(md){
+        background-image: url('../images/newsletter-background.jpg');
+        background-size: cover;
+    }
+    
+    .sg-popup-builder-content{
+        padding: $grid-gutter / 2;
+        
+        @include media-breakpoint-up(md){
+            padding: $grid-gutter * 2;
+            display: flex;
+            align-items: center;
+        }
+
+        h2{
+            color: theme-color(orange)!important;
+        }
+    }
 
     form{
+        background: theme-color(white);
+        padding: $grid-gutter / 2;
+        max-width: 400px;
+        margin: auto;
+        border-radius: 10px;
+
+        h3{
+            color: theme-color(black);
+            font-size: 1.2em;
+        }
+
         p{
             margin-bottom: 0;
-            display: flex;
             width: 100%;
             max-width: 600px;
         }
@@ -147,20 +181,25 @@ a.button{
             margin-bottom: 0;
         }
 
-        input[name="email"]{
+        input[type="email"],
+        input[type="tel"],
+        input[type="text"]{
             border: 1px solid theme-color(black);
             width: 100%;
-            max-width: 400px;
+            margin-bottom: 10px;
         }
 
         input[class="submitform"]{
-            margin-left: 10px;
+            background: theme-color(orange);
+            width: 100%;
+            color: theme-color(black);
         }
     }
 }
 
 .sgpb-popup-close-button-1{
-    top: 9px;
+    right: 30px!important;
+    top: 15px;
     bottom: auto!important;
 }
 

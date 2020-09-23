@@ -151,8 +151,9 @@ body.scrolled{
   }
 }
 
-nav.nav-primary{
+.banner nav.nav-primary{
   a{
+    display: inline-block;
     color: theme-color(black);
     text-transform: uppercase;
     transition: .25s;
