@@ -34,10 +34,6 @@
       "url": "https://composer.deliciousbrains.com/8DAF13E16CC13B06BE314F3D5684DA29"
     },
     {
-      "type": "vcs",
-      "url": "git@github.com:13milliseconds/popup-builder-bundle.git"
-    },
-    {
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -57,7 +53,6 @@
   "require": {
     "php": ">=7.1",
     "composer/installers": "^1.8",
-    "13milliseconds/popup-builder-bundle": "dev-master",
     "vlucas/phpdotenv": "^4.1.8",
     "oscarotero/env": "^1.2.0",
     "roots/wordpress": "5.5.1",
