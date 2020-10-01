@@ -5,7 +5,7 @@
         @php dynamic_sidebar('footer-left') @endphp
       </div>
       <div class="col-md-6" id="newsletterFooter">
-        <h4>Sign up for updates from Courage</h4>
+        <h4>Sign up for updates from Courage.</h4>
         @include('partials.newsletter-signup')
       </div>
       <div class="col-md-3" id="rightFooter">
