@@ -47,6 +47,11 @@ collect([
  * Render page using Blade
  */
 add_filter('template_include', function ($template) {
+    //If using TranslatePress
+    if (strpos($template, 'translation-manager.php')) {
+        return $template;
+    };
+
     collect(['get_header', 'wp_head'])->each(function ($tag) {
         ob_start();
         do_action($tag);
