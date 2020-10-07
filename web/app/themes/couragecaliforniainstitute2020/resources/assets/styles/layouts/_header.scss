@@ -1,9 +1,11 @@
 .banner .nav li {
   @extend .nav-item;
+  padding: .5rem 1rem;
 }
 
 .banner .nav a {
   @extend .nav-link;
+  padding: 0;
 }
 
 header.banner{
@@ -60,6 +62,19 @@ header.banner{
         &:after{
           display: none;
         }
+      }
+    }
+
+    li:nth-last-child(2){
+      padding-right: 5px;
+    }
+
+    li:last-child{
+      padding-left: 0;
+
+      &:before{
+        content: "|";
+        padding-right: 5px;
       }
     }
   }
@@ -201,6 +216,43 @@ body.home{
             display: block;
           }
         }
+      }
+    }
+  }
+}
+
+// Translation Tool
+.banner .nav li{
+  &:nth-last-child(2) a{
+    color: theme-color(orange);
+  }
+}
+
+.scrolled .banner .nav li{
+  &:nth-last-child(2) a{
+    color: theme-color(orange);
+  }
+
+  &:last-child:before{
+    color: theme-color(light);
+  }
+}
+
+.translatepress-es_MX{
+  .banner .nav li{
+    &:nth-last-child(2) a{
+      color: theme-color(black);
+    }
+
+    &:last-child a{
+      color: theme-color(orange);
+    }
+  }
+
+  &.scrolled{
+    .banner .nav li{
+      &:nth-last-child(2) a{
+        color: theme-color(white);
       }
     }
   }
