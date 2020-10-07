@@ -1,7 +1,6 @@
 body{
     font-family: 'Lato', sans-serif;
     font-size: 18px;
-    background-color: theme-color(beige);
 }
 
 h1, h2, h3, h4{
@@ -14,18 +13,34 @@ p{
 }
 
 
-a.button{
-    font-family: 'Gilam';
-    background-color: theme-color(black);
-    color: theme-color(white);
-    padding: 10px 20px;
-    display: inline-block;
-    text-transform: uppercase;
-    transition: .25s;
+a{
+    color: inherit;
 
     &:hover{
         text-decoration: none;
-        background-color: theme-color(orange);
+        color: theme-color(blue);
+    }
+
+    &.button{
+        font-family: 'Gilam';
+        background-color: theme-color(black);
+        color: theme-color(white);
+        padding: 10px 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: .25s;
+    
+        &:hover{
+            background-color: theme-color(orange);
+        }
+
+        &.blue{
+            background-color: theme-color(blue);
+
+            &:hover{
+                background-color: theme-color(orange);
+            }
+        }
     }
 }
 

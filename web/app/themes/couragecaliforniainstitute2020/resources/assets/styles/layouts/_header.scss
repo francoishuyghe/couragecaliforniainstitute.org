@@ -16,6 +16,7 @@ header.banner{
   height: 70px;
   overflow: hidden;
   transition: .25s;
+  background-color: theme-color(black);
 
   display: flex;
   flex-flow: row wrap;
@@ -25,7 +26,7 @@ header.banner{
     img{
       width: 150px;
 
-      &.white{
+      &.black{
         display: none;
       }
     }
@@ -90,10 +91,6 @@ header.banner{
         &.black{
           display: none;
         }
-        
-        &.white{
-          display: block;
-        }
       }
     }
 
@@ -125,36 +122,12 @@ header.banner{
 
 }
 
-body.scrolled{
-  header.banner{
-    background-color: theme-color(black);
-    
-    a{
-      color: theme-color(white);
 
-      &:hover{
-        color: theme-color(orange);
-      }
-    }
-
-    a.brand{
-      img{
-        &.black{
-          display: none;
-        }
-        
-        &.white{
-          display: block;
-        }
-      }
-    }
-  }
-}
 
 .banner nav.nav-primary{
   a{
     display: inline-block;
-    color: theme-color(black);
+    color: theme-color(white);
     text-transform: uppercase;
     transition: .25s;
 
@@ -176,6 +149,59 @@ body.scrolled{
 
     &:nth-child(3){
       flex: 1;
+    }
+  }
+}
+
+
+body.home{
+  header.banner{
+    background-color: transparent;
+    
+    a{
+      color: theme-color(black);
+
+      &:hover{
+        color: theme-color(orange);
+      }
+    }
+
+    a.brand{
+      img{
+        &.white{
+          display: none;
+        }
+        
+        &.black{
+          display: block;
+        }
+      }
+    }
+  }
+
+  &.scrolled{
+    header.banner{
+      background-color: theme-color(black);
+      
+      a{
+        color: theme-color(white);
+  
+        &:hover{
+          color: theme-color(orange);
+        }
+      }
+  
+      a.brand{
+        img{
+          &.black{
+            display: none;
+          }
+          
+          &.white{
+            display: block;
+          }
+        }
+      }
     }
   }
 }

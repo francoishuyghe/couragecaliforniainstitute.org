@@ -68,7 +68,8 @@
     "wpackagist-plugin/popup-builder":"3.68.4",
     "wpackagist-plugin/wordpress-seo":"^14.7",
     "wpackagist-plugin/translatepress-multilingual":"1.8.2",
-    "wpackagist-plugin/the-events-calendar":"5.2.0"
+    "wpackagist-plugin/the-events-calendar":"5.2.0",
+    "wpackagist-plugin/social-warfare":"4.1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.4",

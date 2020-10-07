@@ -39,21 +39,28 @@
     </div>
 </section>
 
-<section id="dates">
-    <div class="container">
-    <h3>{{ $data['key_dates']['title'] }}</h3>
-    <div class="wrap">
-        @foreach ($data['key_dates']['dates'] as $date)
-            <div class="date-wrap row">
-                <div class="date col-md-4">
-                    <h4>{{ $date['date']}}</h4>
+{{-- EVENTS --}}
+@php $events = tribe_get_events() @endphp
+@if($events)
+    <section id="dates">
+        <div class="container">
+        <h3>{{ $data['key_dates']['title'] }}</h3>
+        <div class="wrap">
+            @foreach ($events as $event)
+                <div class="date-wrap row">
+                    <div class="date col-md-4">
+                        <h4>{{ date('M j', strtotime($event->event_date)) }}</h4>
+                    </div>
+                    <div class="text col-md-8">{{ $event->post_title }}</div>
                 </div>
-                <div class="text col-md-8">{{ $date['text'] }}</div>
-            </div>
-        @endforeach
-    </div>
-    </div>
-</section>
+            @endforeach
+        </div>
+        <footer>
+            <a class="button blue" href="/calendar">Full Calendar</a>
+        </footer>
+        </div>
+    </section>
+@endif
 
 <section id="faq">
     <div class="container">

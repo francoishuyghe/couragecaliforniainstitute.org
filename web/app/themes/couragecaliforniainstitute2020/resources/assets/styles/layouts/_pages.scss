@@ -1,9 +1,13 @@
-.page,
-.error404{
- .main{
-    padding: 150px 0 100px;
-    min-height: 100vh;
- }
+body.page,
+body.author,
+body.category,
+body.error404{
+    background-color: theme-color(beige);
+
+    .main{
+        padding: 150px 0 100px;
+        min-height: 100vh;
+    }
 }
 
 .page.home{
@@ -216,6 +220,11 @@
                 font-size: 1.1em;
             }
         }
+
+        footer{
+            text-align: center;
+            margin-top: $grid-gutter;
+        }
     }
 
     #faq{
@@ -251,6 +260,14 @@
                     }
                 }
             }
+        }
+    }
+
+    #blog{
+        background-color: theme-color(white);
+
+        .post-block{
+            margin-bottom: 0;
         }
     }
 
@@ -368,5 +385,58 @@
         &.active{
             display: block;
         }
+    }
+}
+
+//Post block
+.post-block{
+    margin-bottom: $grid-gutter;
+
+    .thumbnail{
+        height: 0;
+        padding-top: 60%;
+        overflow: hidden;
+        margin-bottom: 10px;
+        position: relative;
+        background-color: theme-color(beige);
+
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    }
+
+    .categories {
+        margin-bottom: 5px;
+
+        a{
+            color: theme-color(orange);
+            text-transform: uppercase;
+            font-size: .8em;
+            font-weight: 600;
+
+            &:after{
+                content: ', ';
+            }
+
+            &:last-child{
+                &:after{
+                    content: '';
+                }   
+            }
+        }
+    }
+
+    h4{
+        font-size: 1.1em;
+        margin-bottom: 0;
+    }
+
+    .date{
+        font-size: .9em;
+        color: theme-color(grey);
     }
 }

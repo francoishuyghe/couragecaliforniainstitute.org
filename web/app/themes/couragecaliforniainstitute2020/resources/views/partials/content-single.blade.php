@@ -1,13 +1,20 @@
 <article @php post_class() @endphp>
+  <div class="container">
   <header>
+    <div class="categories">
+      @foreach ($cats as $cat)
+          <a href="{{ get_category_link( $cats[0]->term_id ) }}" class="category-link">
+              {{ $cat->name }}
+          </a>
+      @endforeach
+  </div>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     @include('partials/entry-meta')
   </header>
-  <div class="entry-content">
-    @php the_content() @endphp
+  <div class="thumbnail">
+    <img src="{{ the_post_thumbnail_url() }}" />
   </div>
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-  @php comments_template('/partials/comments.blade.php') @endphp
+  <div class="entry-content">
+      @php the_content() @endphp
+  </div>
 </article>

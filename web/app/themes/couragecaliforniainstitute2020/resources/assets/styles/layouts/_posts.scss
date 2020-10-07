@@ -1,0 +1,27 @@
+.single{
+    .main{
+        padding: 0px 0 100px;
+        min-height: 100vh;
+    }
+
+    .container{
+        max-width: 900px;
+    }
+
+    article{
+        header{
+            padding: 150px 0 20px;
+            margin-bottom: $grid-gutter;
+        }
+
+        .thumbnail{
+            margin-bottom: $grid-gutter;
+
+            img{
+                width: 100%;
+                max-width: 100%;
+                margin: auto;
+            }
+        }
+    }
+}
