@@ -9,11 +9,15 @@
       @endforeach
   </div>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
-    @include('partials/entry-meta')
   </header>
-  <div class="thumbnail">
-    <img src="{{ the_post_thumbnail_url() }}" />
-  </div>
+
+  @php $thumb_url = get_the_post_thumbnail_url() @endphp
+  @if( $thumb_url )
+    <div class="thumbnail">
+      <img src="{{ $thumb_url }}" />
+    </div>
+  @endif
+
   <div class="entry-content">
       @php the_content() @endphp
   </div>

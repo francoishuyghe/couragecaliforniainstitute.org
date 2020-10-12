@@ -11,7 +11,12 @@
     article{
         header{
             padding: 150px 0 20px;
-            margin-bottom: $grid-gutter;
+            margin-bottom: $grid-gutter / 2;
+
+            h1{
+                color: theme-color(orange);
+                margin-bottom: 0;
+            }
         }
 
         .thumbnail{
