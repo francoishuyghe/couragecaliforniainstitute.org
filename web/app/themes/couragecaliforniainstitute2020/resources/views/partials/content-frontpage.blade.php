@@ -29,6 +29,47 @@
     </div>
 </section>
 
+<section id="counties">
+    <div class="container">
+        <h2>{{ $data['counties']['title'] }}</h2>
+        {!! $data['counties']['text'] !!}
+        <select name="counties" id="selectCounties">
+            <option disabled selected>Select Your County</option>
+            @foreach ($post_categories as $cat)
+                @php $arg = array( 'numberposts' => 1, 'category'   => $cat->term_id );
+                $catPost = get_posts($arg); @endphp
+                <option value="{{ get_permalink($catPost[0]) }}">{{ $cat->name }}</option>
+            @endforeach
+        </select>
+    </div>
+    <img src="@asset('images/cc-ballot.png')" class="ballot" />
+    <img src="@asset('images/cc-mailbox.png')" class="mailbox" />
+</section>
+
+
+{{-- EVENTS --}}
+@php $events = tribe_get_events() @endphp
+@if($events)
+<section id="dates">
+    <div class="container">
+        <h3>{{ $data['key_dates']['title'] }}</h3>
+        <div class="wrap">
+            @foreach ($events as $event)
+            <div class="date-wrap row">
+                <div class="date col-md-4">
+                    <h4>{{ date('M j', strtotime($event->event_date)) }}</h4>
+                </div>
+                <div class="text col-md-8">{{ $event->post_title }}</div>
+            </div>
+            @endforeach
+        </div>
+        <footer>
+            <a class="button blue" href="/calendar">Full Calendar</a>
+        </footer>
+    </div>
+</section>
+@endif
+
 <section id="newsletter">
     <div class="container">
         <h3>{!! $data['newsletter']['text'] !!}</h3>
@@ -38,29 +79,6 @@
         </div>
     </div>
 </section>
-
-{{-- EVENTS --}}
-@php $events = tribe_get_events() @endphp
-@if($events)
-    <section id="dates">
-        <div class="container">
-        <h3>{{ $data['key_dates']['title'] }}</h3>
-        <div class="wrap">
-            @foreach ($events as $event)
-                <div class="date-wrap row">
-                    <div class="date col-md-4">
-                        <h4>{{ date('M j', strtotime($event->event_date)) }}</h4>
-                    </div>
-                    <div class="text col-md-8">{{ $event->post_title }}</div>
-                </div>
-            @endforeach
-        </div>
-        <footer>
-            <a class="button blue" href="/calendar">Full Calendar</a>
-        </footer>
-        </div>
-    </section>
-@endif
 
 <section id="faq">
     <div class="container">

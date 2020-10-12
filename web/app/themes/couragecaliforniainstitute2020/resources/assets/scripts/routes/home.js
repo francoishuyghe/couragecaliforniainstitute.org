@@ -1,6 +1,11 @@
 export default {
   init() {
     // JavaScript to be fired on the home page
+
+    // Link to selected county when selected
+    $('#counties select').change(function () { 
+      window.location.href = $(this).val();
+    });
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS

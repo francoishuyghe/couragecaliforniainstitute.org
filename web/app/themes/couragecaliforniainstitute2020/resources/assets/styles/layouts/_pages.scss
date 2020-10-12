@@ -158,6 +158,64 @@ body.error404{
         }
     }
 
+    #counties{
+        padding: $grid-gutter * 2 0;
+        background: theme-color(blue);
+        z-index: 0;
+        text-align: center;
+        color: theme-color(white);
+        position: relative;
+
+        @include media-breakpoint-up(lg){
+            padding: $grid-gutter * 3 0;
+        }
+
+        h2{
+            color: theme-color(orange);
+            margin-bottom: 0;
+        }
+
+        select{
+            margin-top: $grid-gutter / 2;
+            width: 100%;
+            max-width: 500px;
+            padding: 10px 20px;
+            border: 0;
+            color: theme-color(grey);
+            -webkit-appearance: none;
+            background: url(../images/triangle.png) no-repeat 98% theme-color(white);
+            background-size: 4%;
+        }
+
+        .mailbox{
+            display: none;
+
+            @include media-breakpoint-up(lg){
+                display: block;
+                position: absolute;
+                right: $grid-gutter;
+                bottom: 0;
+                height: 100%;
+                width: auto;
+                z-index: -1;
+            }
+        }
+
+        .ballot{
+            transition: .25s;
+            position: absolute;
+            bottom: 0;
+            left: $grid-gutter;
+            z-index: -1;
+            opacity: .3;
+
+            @include media-breakpoint-up(xl){
+                opacity: 1;
+                left: 0;
+            }
+        }
+    }
+
     #newsletter{
         background-color: theme-color(orange);
         text-align: center;
