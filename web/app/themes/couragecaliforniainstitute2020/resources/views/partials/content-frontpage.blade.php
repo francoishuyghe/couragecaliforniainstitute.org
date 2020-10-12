@@ -43,7 +43,7 @@
         </select>
     </div>
     <img src="@asset('images/cc-ballot.png')" class="ballot" />
-    <img src="@asset('images/cc-mailbox.png')" class="mailbox" />
+<img src="{{ $data['counties']['illustration']['url'] }}" class="mailbox" />
 </section>
 
 
