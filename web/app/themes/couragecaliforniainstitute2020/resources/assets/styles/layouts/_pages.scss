@@ -175,8 +175,16 @@ body.error404{
             margin-bottom: 0;
         }
 
+        p{
+            margin-bottom: 0;
+
+            a{
+                color: theme-color(orange);
+            }
+        }
+
         select{
-            margin-top: $grid-gutter / 2;
+            margin: $grid-gutter / 2 0;
             width: 100%;
             max-width: 500px;
             padding: 10px 20px;
