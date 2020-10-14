@@ -41,7 +41,7 @@
                 <option value="{{ get_permalink($catPost[0]) }}">{{ $cat->name }}</option>
             @endforeach
         </select>
-        <p>Or check out <a href="/statewide-voting-information">statewide voting information</a>.</p>
+        {{-- <p>Or check out <a href="/statewide-voting-information">statewide voting information</a>.</p> --}}
     </div>
     <img src="@asset('images/cc-ballot.png')" class="ballot" />
 <img src="{{ $data['counties']['illustration']['url'] }}" class="mailbox" />
