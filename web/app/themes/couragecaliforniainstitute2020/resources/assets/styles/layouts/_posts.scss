@@ -28,5 +28,13 @@
                 margin: auto;
             }
         }
+
+        a:not(.wp-block-button__link){
+            color: theme-color(blue);
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 }

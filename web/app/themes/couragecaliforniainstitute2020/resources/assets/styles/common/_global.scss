@@ -21,6 +21,22 @@ a{
         color: theme-color(blue);
     }
 
+    &.wp-block-button__link{
+        font-family: 'Gilam';
+        background-color: theme-color(blue);
+        color: theme-color(white);
+        padding: 10px 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: .25s;
+        border-radius: 0;
+    
+        &:hover{
+            background-color: theme-color(orange);
+            text-decoration: none;
+        }
+    }
+
     &.button{
         font-family: 'Gilam';
         background-color: theme-color(black);
