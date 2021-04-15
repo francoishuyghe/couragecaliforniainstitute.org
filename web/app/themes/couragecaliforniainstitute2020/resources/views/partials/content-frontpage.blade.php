@@ -36,7 +36,11 @@
         <select name="counties" id="selectCounties">
             <option disabled selected>Select Your County</option>
             @foreach ($post_categories as $cat)
-                @php $arg = array( 'numberposts' => 1, 'category'   => $cat->term_id );
+                @php $arg = array( 
+                    'post_type' => 'howto',
+                    'numberposts' => 1, 
+                    'category'   => $cat->term_id 
+                );
                 $catPost = get_posts($arg); @endphp
                 <option value="{{ get_permalink($catPost[0]) }}">{{ $cat->name }}</option>
             @endforeach

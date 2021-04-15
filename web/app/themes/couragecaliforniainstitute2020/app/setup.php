@@ -144,3 +144,32 @@ if(!isset($_COOKIE['popup_visit_time'])) {
     setcookie('popup_visit_time', $visit_time, time()+86400);
 }
     
+
+// Setup a new post type: How-To
+add_action('init',  __NAMESPACE__ . '\\howto_custom_init');
+function HowTo_custom_init() 
+{
+  $labels = array(
+    'name' => _x('HowTo', 'post type general name'),
+    'singular_name' => _x('How-To Article', 'post type singular name'),
+    'parent_item_colon' => '',
+    'menu_name' => 'How-To'
+  );
+  
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'how-to' ),
+    'capability_type' => 'post',
+    'has_archive' => true, 
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array('title','editor','thumbnail','custom-fields'),
+    'taxonomies' => array('title', 'category' )
+  ); 
+  register_post_type('howto',$args);
+}
