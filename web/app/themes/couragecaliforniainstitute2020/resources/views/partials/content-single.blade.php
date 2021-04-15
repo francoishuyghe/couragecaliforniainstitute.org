@@ -1,6 +1,9 @@
+@php $cats = get_the_category($post->ID) @endphp
 <article @php post_class() @endphp>
   <div class="container">
   <header>
+    <a href="/blog"><i class="fal fa-long-arrow-left"></i> Back to blog</a>
+    <h1 class="entry-title">{!! get_the_title() !!}</h1>
     <div class="categories">
       @foreach ($cats as $cat)
           <a href="{{ get_category_link( $cats[0]->term_id ) }}" class="category-link">
@@ -8,7 +11,6 @@
           </a>
       @endforeach
   </div>
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
   </header>
 
   @php $thumb_url = get_the_post_thumbnail_url() @endphp

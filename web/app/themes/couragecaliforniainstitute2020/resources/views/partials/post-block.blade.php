@@ -1,10 +1,13 @@
-@php $cats = get_the_category($latest_post->ID) @endphp
+@php $cats = get_the_category($post->ID) @endphp
 <div class="post-block">
-    <a href="{{ get_the_permalink($latest_post->ID) }}">
     <div class="thumbnail">
-        <img src="{{ get_the_post_thumbnail_url($latest_post->ID) }}" />
+        <div class="thumbnail-wrap">
+        <a href="{{ get_the_permalink($post->ID) }}">
+            <img src="{{ get_the_post_thumbnail_url($post->ID) }}" />
+        </a>
+        </div>
     </div>
-    </a>
+    <div class="text">
     <div class="categories">
         @foreach ($cats as $cat)
             <a href="{{ get_category_link( $cats[0]->term_id ) }}" class="category-link">
@@ -12,9 +15,12 @@
             </a>
         @endforeach
     </div>
-    <a href="{{ get_the_permalink($latest_post->ID) }}">
-        <h4>{!! get_the_title($latest_post->ID) !!}</h4>
+    <a href="{{ the_permalink() }}">
+        <h4>{!! the_title() !!}</h4>
     </a>
+    <div class="excerpt">
+        {!! the_excerpt() !!}
+    </div>
     <div class="byline">By {{ get_the_author() }}</div>
-    <div class="date">{{ get_the_date() }}</div>
+    </div>
 </div>
