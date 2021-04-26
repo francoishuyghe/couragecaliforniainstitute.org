@@ -490,21 +490,35 @@ body.error404{
                 }
             }
         }
-        
-        .col-md-4{
-            .post-block{
-                border-right: 1px solid theme-color(lightgrey);
-                padding-right: $grid-gutter / 2;
-            }
+
+        .post-wrap{
+            @extend .col-md-12;
+            @extend .horizontal;
             
+            &:nth-child(1),
+            &:nth-child(2),
             &:nth-child(3){
+                @extend .col-md-4;
+
                 .post-block{
-                border-right: 0;
+                    flex-flow: column;
+                    border-right: 1px solid theme-color(lightgrey);
+                    padding-right: $grid-gutter / 2;
+
+                    .text,
+                    .thumbnail{
+                        @extend .col-12;
+                    }
+                }
+                
+                &:nth-child(3){
+                    .post-block{
+                    border-right: 0;
+                    }
                 }
             }
-        }
 
-        .post-block{
+
             .excerpt p{
                 margin-bottom: 10px;
             }
