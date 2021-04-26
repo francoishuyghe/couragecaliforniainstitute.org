@@ -1,7 +1,7 @@
 @php global $post @endphp
-<section id="intro">
+{{-- <section id="intro">
     {!! the_content() !!}
-</section>
+</section> --}}
 
 <section id="blog">
     <div class="row">

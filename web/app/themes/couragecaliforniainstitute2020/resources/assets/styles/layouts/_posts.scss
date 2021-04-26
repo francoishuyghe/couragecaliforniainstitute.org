@@ -17,6 +17,26 @@
                 color: theme-color(orange);
                 margin-bottom: 0;
             }
+
+            a.back{
+                color: theme-color(lightgrey);
+                transition: .25s;
+                
+                &:hover{
+                    text-decoration: none;
+                    color: theme-color(black);
+                }
+            }
+
+            .categories{
+                a{
+                    color: theme-color(orange);
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: .8em;
+                    letter-spacing: .05em;
+                }
+            }
         }
 
         .thumbnail{

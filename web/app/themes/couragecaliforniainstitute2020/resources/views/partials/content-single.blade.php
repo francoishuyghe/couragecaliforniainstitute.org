@@ -2,7 +2,7 @@
 <article @php post_class() @endphp>
   <div class="container">
   <header>
-    <a href="/blog"><i class="fal fa-long-arrow-left"></i> Back to blog</a>
+    <a href="/blog" class="back"><i class="fal fa-long-arrow-left"></i> Back to blog</a>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     <div class="categories">
       @foreach ($cats as $cat)

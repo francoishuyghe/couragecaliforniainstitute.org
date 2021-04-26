@@ -470,12 +470,12 @@ body.error404{
             display: inline-block;
             margin-right: 10px;
             font-weight: 600;
-            text-transform: uppercase;
             color: theme-color(grey);
             font-size: .8em;
+            letter-spacing: .05em;
 
             &:hover{
-                color: theme-color(yellow);
+                color: theme-color(orange);
             }
         }
     }
@@ -486,8 +486,32 @@ body.error404{
                 &:nth-child(4){
                     margin-top: $grid-gutter;
                     padding-top: $grid-gutter;
-                    border-top: 1px solid theme-color(grey);
+                    border-top: 1px solid theme-color(lightgrey);
                 }
+            }
+        }
+        
+        .col-md-4{
+            .post-block{
+                border-right: 1px solid theme-color(lightgrey);
+                padding-right: $grid-gutter / 2;
+            }
+            
+            &:nth-child(3){
+                .post-block{
+                border-right: 0;
+                }
+            }
+        }
+
+        .post-block{
+            .excerpt p{
+                margin-bottom: 10px;
+            }
+
+            .byline{
+                color: theme-color(grey);
+                font-size: .8em;
             }
         }
     }
@@ -505,7 +529,7 @@ body.error404{
             padding-top: 60%;
             overflow: hidden;
             margin-bottom: 10px;
-            background-color: theme-color(grey);
+            background-color: theme-color(lightgrey);
             position: relative;
 
         }
