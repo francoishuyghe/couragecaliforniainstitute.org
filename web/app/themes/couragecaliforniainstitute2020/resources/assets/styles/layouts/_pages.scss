@@ -540,6 +540,7 @@ body.error404{
 
     .thumbnail{
         width: 100%;
+        margin-bottom: $grid-gutter / 3;
 
         .thumbnail-wrap{
             height: 0;
@@ -563,7 +564,7 @@ body.error404{
     }
 
     .categories {
-        margin-bottom: 5px;
+        margin-bottom: 0;
 
         a{
             color: theme-color(orange);
@@ -585,7 +586,7 @@ body.error404{
 
     h4{
         font-size: 1.1em;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .date{
@@ -600,6 +601,14 @@ body.error404{
 
     .excerpt p{
         margin-bottom: 10px;
+
+        a{
+            color: theme-color(blue);
+            
+            &:hover{
+                color: theme-color(orange);
+            }
+        }
     }
 }
 
