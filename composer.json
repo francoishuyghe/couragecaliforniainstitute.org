@@ -30,6 +30,10 @@
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
     },
     {
+      "type": "vcs",
+      "url": "git@github.com:13milliseconds/social-warfare-pro.git"
+    },
+    {
       "type": "composer",
       "url": "https://composer.deliciousbrains.com/8DAF13E16CC13B06BE314F3D5684DA29"
     },
@@ -37,7 +41,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.9.1",
+        "version": "5.9.5",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -59,17 +63,18 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/advanced-custom-fields": "^5.9.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.0.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9.5",
     "wpackagist-plugin/post-types-order": "^1.9.4.3",
     "wpackagist-plugin/duplicate-post": "^3.2",
-    "deliciousbrains-plugin/wp-migrate-db-pro": "1.9.12",
-    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^1.4",
+    "13milliseconds/social-warfare-pro": "dev-master",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "2.0.1",
+    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^2.0",
     "wpackagist-plugin/wp-fastest-cache": "^0.9.0.9",
     "wpackagist-plugin/popup-builder":"3.68.4",
     "wpackagist-plugin/wordpress-seo":"^14.7",
     "wpackagist-plugin/translatepress-multilingual":"1.9.8",
     "wpackagist-plugin/the-events-calendar":"5.2.0",
-    "wpackagist-plugin/social-warfare":"4.1.0",
+    "wpackagist-plugin/social-warfare":"4.2.1",
     "wpackagist-plugin/post-type-switcher":"3.2.0"
   },
   "require-dev": {

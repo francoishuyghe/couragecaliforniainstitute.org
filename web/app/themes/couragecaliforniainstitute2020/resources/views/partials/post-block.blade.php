@@ -10,9 +10,11 @@
     <div class="text">
     <div class="categories">
         @foreach ($cats as $cat)
-            <a href="{{ get_category_link( $cats[0]->term_id ) }}" class="category-link">
+        @if($cat->name !== 'Uncategorized')
+            <a href="{{ get_category_link( $cat->term_id ) }}" class="category-link">
                 {{ $cat->name }}
             </a>
+            @endif
         @endforeach
     </div>
     <a href="{{ the_permalink() }}">

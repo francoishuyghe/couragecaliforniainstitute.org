@@ -3,14 +3,21 @@
   <div class="container">
   <header>
     <a href="/blog" class="back"><i class="fal fa-long-arrow-left"></i> Back to blog</a>
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
     <div class="categories">
       @foreach ($cats as $cat)
-          <a href="{{ get_category_link( $cats[0]->term_id ) }}" class="category-link">
+        @if($cat->name !== 'Uncategorized')
+          <a href="{{ get_category_link( $cat->term_id ) }}" class="category-link">
               {{ $cat->name }}
           </a>
+          @endif
       @endforeach
-  </div>
+    </div>
+    <h1 class="entry-title">{!! get_the_title() !!}</h1>
+    @include('partials.entry-meta')
+    <div class="date">
+      {{ the_date() }}
+    </div>
+    @php social_warfare() @endphp
   </header>
 
   @php $thumb_url = get_the_post_thumbnail_url() @endphp
