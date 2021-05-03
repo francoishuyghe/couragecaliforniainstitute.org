@@ -336,10 +336,19 @@ body.error404{
     }
 
     #blog{
-        background-color: theme-color(white);
+        background-color: theme-color(orange);
 
+        h2{
+            color: theme-color(white);
+        }
+        
         .post-block{
             margin-bottom: 0;
+            background-color: theme-color(white);
+
+            .text{
+                padding: 0 10px 10px;
+            }
         }
     }
 
