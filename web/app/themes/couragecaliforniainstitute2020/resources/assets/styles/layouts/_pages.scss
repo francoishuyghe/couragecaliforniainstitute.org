@@ -492,12 +492,20 @@ body.error404{
             display: inline-block;
             margin-right: 10px;
             font-weight: 600;
-            color: theme-color(grey);
+            color: theme-color(lightgrey);
             font-size: .8em;
             letter-spacing: .05em;
 
-            &:hover{
-                color: theme-color(orange);
+            &:not(.active){
+                pointer-events: none;
+            }
+            
+            &.active{
+                color: theme-color(grey);
+
+                &:hover{
+                    color: theme-color(orange);
+                }
             }
         }
     }
