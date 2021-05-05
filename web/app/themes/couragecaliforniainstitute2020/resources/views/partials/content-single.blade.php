@@ -30,4 +30,23 @@
   <div class="entry-content">
       @php the_content() @endphp
   </div>
+
+  <div class="footer-links">
+    <div class="row">
+    <div class="col-6 left">
+      @php $prev = get_previous_post_link($format = '%link') @endphp
+      @if($prev)
+      <h6>Previous</h6>
+      {!! $prev !!}
+      @endif
+    </div>
+    <div class="right col-6">
+      @php $next = get_next_post_link($format = '%link') @endphp
+      @if($next)
+      <h6>Next</h6>
+      {!! $next !!}
+      @endif
+    </div>
+    </div>
+  </div>
 </article>
