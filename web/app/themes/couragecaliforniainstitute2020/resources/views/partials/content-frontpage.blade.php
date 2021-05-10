@@ -21,9 +21,10 @@
 <section id="blog">
     <div class="container">
     <div class="section-header center">
-        <h2>{{ $data['blog']['title'] }}</h2>
+        <h3><a href="/blog">{{ $data['blog']['title'] }}</a></h3>
+        <p>{{ $data['blog']['description'] }}</p>
     </div>
-    <div class="row">
+    <div class="row posts">
         @php global $post @endphp
         @foreach ($latest_posts as $post)
             @php setup_postdata($post) @endphp

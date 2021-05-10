@@ -120,12 +120,6 @@ body.error404{
         }
     }
 
-    #blog{
-        .section-footer{
-            margin-top: $grid-gutter;
-        }
-    }
-
     #track{
         background-color: transparent;
 
@@ -338,13 +332,29 @@ body.error404{
     #blog{
         background-color: theme-color(orange);
 
-        h2{
+        h3{
             color: theme-color(white);
+            margin-bottom: 0;
+        }
+
+        .posts{
+            margin-top: $grid-gutter;
+        }
+
+        .section-footer{
+            margin-top: $grid-gutter;
+
+            a.button{
+                &:hover{
+                    background-color: theme-color(blue);
+                }
+            }
         }
         
         .post-block{
             margin-bottom: 0;
             background-color: theme-color(white);
+            height: 100%;
 
             .text{
                 padding: 0 10px 10px;

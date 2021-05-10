@@ -158,6 +158,17 @@ header.banner{
 
 }
 
+// All social links
+li.first-social{
+  &:before{
+    content: 'Follow Us';
+    color: theme-color(white);
+    text-transform: uppercase;
+    font-size: .8em;
+    margin-right: 5px;
+  }
+}
+
 
 
 .banner nav.nav-primary{

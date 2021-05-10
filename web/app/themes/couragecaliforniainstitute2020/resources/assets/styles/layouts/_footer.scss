@@ -14,7 +14,7 @@ footer.content-info{
     }
 
     .row{
-        flex-flow: column;
+        flex-flow: column-reverse;
 
         @include media-breakpoint-up(md){
             flex-flow: row;
@@ -23,11 +23,6 @@ footer.content-info{
     
     //Left Footer
     #leftFooter{
-        margin-bottom: $grid-gutter;
-
-        @include media-breakpoint-up(md){
-            margin-bottom: 0;
-        }
 
         img{
             width: 150px;
@@ -46,8 +41,10 @@ footer.content-info{
     //Right Footer
     #rightFooter{
         display: none;
-
+        margin-bottom: $grid-gutter;
+        
         @include media-breakpoint-up(md){
+            margin-bottom: 0;
             display: block;
         }
 
@@ -57,9 +54,15 @@ footer.content-info{
 
         #menu-footer{
             padding-left: 0;
+            display: flex;
+            flex-flow: row wrap;
 
             li{
                 list-style: none;
+
+                &:first-child{
+                    flex: 0 0 100%;
+                }
     
                 a{
                     color: theme-color(white);
