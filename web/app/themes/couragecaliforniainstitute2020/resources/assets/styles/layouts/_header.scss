@@ -160,6 +160,8 @@ header.banner{
 
 // All social links
 li.first-social{
+  padding-right: 0;
+  
   &:before{
     content: 'Follow Us';
     color: theme-color(white);
