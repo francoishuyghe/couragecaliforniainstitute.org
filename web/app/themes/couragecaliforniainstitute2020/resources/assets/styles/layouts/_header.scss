@@ -42,6 +42,10 @@ header.banner{
     flex-flow: row wrap;
     align-items: center;
 
+    li.first-social{
+      padding-right: 0;
+    }
+
     @include media-breakpoint-down(lg){
       li{
         width: 100%;
@@ -160,8 +164,6 @@ header.banner{
 
 // All social links
 li.first-social{
-  padding-right: 0;
-  
   &:before{
     content: 'Follow Us';
     color: theme-color(white);
