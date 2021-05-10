@@ -219,6 +219,12 @@ body.home{
       }
     }
 
+    li.first-social{
+      &:before{
+        color: theme-color(black);
+      }
+    }
+
     .nav li{
       &:nth-child(3) a{
         color: inherit;
@@ -254,6 +260,12 @@ body.home{
   
         &:hover{
           color: theme-color(orange);
+        }
+      }
+
+      li.first-social{
+        &:before{
+          color: theme-color(white); 
         }
       }
 
