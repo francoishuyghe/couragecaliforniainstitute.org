@@ -506,54 +506,64 @@ body.error404{
             font-size: .8em;
             letter-spacing: .05em;
 
-            &:not(.active){
+            &:not(.available){
                 pointer-events: none;
             }
             
-            &.active{
+            &.available{
                 color: theme-color(grey);
 
                 &:hover{
                     color: theme-color(orange);
                 }
+                
+                &.active{
+                    color: theme-color(orange);
+                }
             }
+            
         }
     }
 
     #blog{
-        .row{
-            & > div{
-                &:nth-child(4){
-                    margin-top: $grid-gutter;
-                    padding-top: $grid-gutter;
-                    border-top: 1px solid theme-color(lightgrey);
-                }
-            }
-        }
 
         .post-wrap{
             @extend .col-md-12;
             @extend .horizontal;
-            
-            &:nth-child(1),
-            &:nth-child(2),
-            &:nth-child(3){
-                @extend .col-md-4;
+        }
 
-                .post-block{
-                    flex-flow: column;
-                    border-right: 1px solid theme-color(lightgrey);
-                    padding: 0 $grid-gutter / 2;
-
-                    .text,
-                    .thumbnail{
-                        @extend .col-12;
+        &:not(.filtered){
+            .row{
+                & > div{
+                    &:nth-child(4){
+                        margin-top: $grid-gutter;
+                        padding-top: $grid-gutter;
+                        border-top: 1px solid theme-color(lightgrey);
                     }
                 }
-                
+            }
+            
+            .post-wrap{
+                &:nth-child(1),
+                &:nth-child(2),
                 &:nth-child(3){
+                    @extend .col-md-4;
+
                     .post-block{
-                    border-right: 0;
+                        flex-flow: column;
+                        border-right: 1px solid theme-color(lightgrey);
+                        padding: 0 $grid-gutter / 2;
+
+                        .text,
+                        .thumbnail{
+                            @extend .col-12;
+                        }
+                    }
+                    
+                    &:nth-child(3){
+                        .post-block{
+                        border-right: 0;
+                        }
                     }
                 }
             }

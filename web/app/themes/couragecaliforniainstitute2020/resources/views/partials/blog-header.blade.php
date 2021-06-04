@@ -8,7 +8,7 @@
       )); 
     @endphp
       @foreach ($cats as $category)
-        <a href="{{get_category_link($category->term_id) }}" @if($category->count > 0)class="active"@endif>{{$category->name }}</a>
+        <a href="{{get_category_link($category->term_id) }}" data-cat="{{ $category->slug }}" @if($category->count > 0)class="available"@endif>{{$category->name }}</a>
       @endforeach
   </div>
 </div>
