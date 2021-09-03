@@ -42,12 +42,12 @@ body.error404{
 
         h2{
             font-size: 2.2em;
-            margin-bottom: 20px;
+            margin-bottom: 0;
             color: theme-color(blue);
 
-            .underlined{
-                background-image: url(../images/underline-orange.svg);
-            }
+            // .underlined{
+            //     background-image: url(../images/underline-orange.svg);
+            // }
         }
 
         @include media-breakpoint-up(md){
@@ -62,30 +62,39 @@ body.error404{
             background-position: left bottom;
 
             .container{
-                max-width: 50%;
-                margin-right: $grid-gutter;
+                max-width: 700px;
+                padding: $grid-gutter;
+                border: 5px solid theme-color(blue);
+                position: relative;
             }
 
             h2{
-                font-size: 3.5em;
+                font-size: 2em;
+            }
+
+            .subtitle{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: inline-block;
+                padding: 5px $grid-gutter;
+                background-color: theme-color(beige);
+                text-transform: uppercase;
+                color: theme-color(grey);
+                font-size: .9em;
+                font-weight: 600;
+                letter-spacing: .08em;
+                white-space: nowrap;
             }
     
             p{
-                font-size: 1.5em;
+                font-size: 1.2em;
             }
         }
 
         @include media-breakpoint-up(lg){
             background-size: contain;
-        }
-
-        @include media-breakpoint-up(xl){
-
-            .container{
-                max-width: none;
-                margin-left: 25%;
-                margin-right: $grid-gutter;
-            }
         }
     }
 
@@ -660,5 +669,11 @@ body.error404{
         .text{
             @extend .col-md-8;
         }
+    }
+}
+
+.page-template-default{
+    main.main .container{
+        max-width: 800px;
     }
 }

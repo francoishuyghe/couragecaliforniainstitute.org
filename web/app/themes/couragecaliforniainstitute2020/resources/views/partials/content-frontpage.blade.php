@@ -1,7 +1,9 @@
 <section id="intro" style="background-image: url({{ $data['intro']['image']['sizes']['large'] }})">
     <div class="container">
+        <p class="subtitle">{!! $data['intro']['subtitle'] !!}</p>
         <h2>{!! $data['intro']['title'] !!}</h2>
         <p>{{ $data['intro']['text'] }}</p>
+        <a class="button" href="{{ $data['intro']['button']['url'] }}">{{ $data['intro']['button']['title'] }}</a>
     </div>
 </section>
 
