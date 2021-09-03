@@ -22,9 +22,13 @@ header.banner{
 
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   a.brand{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
     img{
       width: 150px;
 
