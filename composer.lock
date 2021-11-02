@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93aeb20bbcaf1e44f944d1fdcf33ad44",
+    "content-hash": "04175d7d722d0579a890d3690a634a9e",
     "packages": [
         {
             "name": "13milliseconds/social-warfare-pro",
@@ -45,7 +45,7 @@
         },
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.9.5",
+            "version": "5.10.2",
             "dist": {
                 "type": "zip",
                 "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"

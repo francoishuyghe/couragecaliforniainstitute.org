@@ -90,6 +90,10 @@ footer.content-info{
     #newsletterFooter{
         padding: 0 $grid-gutter;
 
+        .button{
+            background-color: theme-color(blue);
+        }
+
         h4{
             color: theme-color(orange);
             font-size: 1em;
