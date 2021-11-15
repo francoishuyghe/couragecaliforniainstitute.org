@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76728645e0cfbdd0c5c31a919e532419",
+    "content-hash": "b741242cc9263a7417a9341e95aef7a0",
     "packages": [
         {
             "name": "13milliseconds/social-warfare-pro",
@@ -209,10 +209,10 @@
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=2.0.1&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=2.0.2&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -886,6 +886,24 @@
             "time": "2021-10-02T19:17:08+00:00"
         },
         {
+            "name": "wpackagist-plugin/add-search-to-menu",
+            "version": "4.6.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/add-search-to-menu/",
+                "reference": "tags/4.6.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/add-search-to-menu.4.6.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/add-search-to-menu/"
+        },
+        {
             "name": "wpackagist-plugin/advanced-custom-fields",
             "version": "5.11",
             "source": {
@@ -976,16 +994,34 @@
             "homepage": "https://wordpress.org/plugins/post-types-order/"
         },
         {
-            "name": "wpackagist-plugin/social-warfare",
-            "version": "4.2.1",
+            "name": "wpackagist-plugin/simple-custom-post-order",
+            "version": "2.5.6",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/social-warfare/",
-                "reference": "tags/4.2.1"
+                "url": "https://plugins.svn.wordpress.org/simple-custom-post-order/",
+                "reference": "tags/2.5.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/social-warfare.4.2.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/simple-custom-post-order.2.5.6.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simple-custom-post-order/"
+        },
+        {
+            "name": "wpackagist-plugin/social-warfare",
+            "version": "4.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/social-warfare/",
+                "reference": "tags/4.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/social-warfare.4.1.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
@@ -995,15 +1031,15 @@
         },
         {
             "name": "wpackagist-plugin/the-events-calendar",
-            "version": "5.2.0",
+            "version": "5.7.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/the-events-calendar/",
-                "reference": "tags/5.2.0"
+                "reference": "tags/5.7.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.5.2.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.5.7.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
@@ -1049,15 +1085,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "14.9",
+            "version": "16.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/14.9"
+                "reference": "tags/16.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.14.9.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.16.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
