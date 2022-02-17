@@ -33,6 +33,9 @@ add_filter('excerpt_more', function () {
     return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 });
 
+add_filter('excerpt_length', function ($length){
+    return 15;
+});
 /**
  * Template Hierarchy should search for .blade.php files
  */

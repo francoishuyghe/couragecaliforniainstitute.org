@@ -10,7 +10,11 @@ class FrontPage extends Controller
     public function latest_posts() {
         $args = array(
 			'post_type' => 'post',
-	    	'posts_per_page' => 3,
+	    	'post_status'            => array('publish'), 
+            'posts_per_page'         => '3', 
+            'order'                  => 'DESC',
+            'orderby'                => 'date',
+            'ignore_sticky_posts' => 1
 	    );
 	    $the_query = new WP_Query( $args );
 	    return $the_query->posts;
