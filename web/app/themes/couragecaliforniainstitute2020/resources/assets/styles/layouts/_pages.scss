@@ -413,6 +413,10 @@ body.error404{
                 }
             }
         }
+
+        .col-md-4{
+            margin-bottom: $grid-gutter / 2;
+        }
         
         .post-block{
             margin-bottom: 0;
