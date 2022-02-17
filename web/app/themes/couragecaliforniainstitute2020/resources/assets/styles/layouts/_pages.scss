@@ -615,7 +615,7 @@ body.error404{
                     .post-block{
                         flex-flow: column;
                         border-right: 1px solid theme-color(lightgrey);
-                        padding: 0 $grid-gutter / 2;
+                        //padding: 0 $grid-gutter / 2;
 
                         .text,
                         .thumbnail{
