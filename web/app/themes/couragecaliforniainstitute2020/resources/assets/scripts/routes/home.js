@@ -3,17 +3,16 @@ export default {
     // JavaScript to be fired on the home page
 
     // Link to selected county when selected
-    // $('#counties select').change(function () { 
-    //   window.location.href = $(this).val();
-    // });
+    $('#counties select').change(function () { 
+      window.location.href = $(this).val();
+    });
 
     //Check if form was submitted
     console.log('Javascript??')
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    console.log('queryString: ', queryString);
-    if(urlParams.has('action_id'))
-      console.log('Submitted')
+    if (urlParams.has('action_id'))
+      $('#signup-replacement').show();
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
