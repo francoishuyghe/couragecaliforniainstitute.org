@@ -3,7 +3,7 @@
 
 
 <div class="newsletter-wrap">
-  <form id="signupForm" class="actionkit-widget" name="act" method="POST" action="http://act.couragecampaign.org/act/" accept-charset="utf-8">
+  <form id="signupForm" class="actionkit-widget" name="act" method="POST" action="https://act.couragecampaign.org/act/" accept-charset="utf-8">
     <div class="form-wrap">
     <input type="hidden" name="utf8" value="&#x2714;">
 
@@ -28,12 +28,6 @@
 <script type="text/javascript">
 (function($) {
 $(document).ready(function() { 
-  //Check if form was submitted
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  console.log('queryString: ', queryString);
-  if(urlParams.has('action_id'))
-    console.log('Submitted')
 
   //Catch error messages when sending
   $('#signupForm')
