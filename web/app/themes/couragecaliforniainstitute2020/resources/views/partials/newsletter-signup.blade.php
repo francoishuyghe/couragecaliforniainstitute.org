@@ -1,23 +1,60 @@
-<script src="https://act.couragecampaign.org/resources/actionkit.js"></script>
-<script type="text/javascript">actionkit.forms.initPage()</script>
-    
-<form class="action_form newsletter-form" name="act" method="POST" action="https://act.couragecampaign.org/act/" accept-charset="utf-8">
-  <div class="form-wrap">
+
+<script type="text/javascript">actionkit.forms.initPage();</script>
+
+
+<div class="newsletter-wrap">
+  <form id="signupForm" class="actionkit-widget" name="act" method="POST" action="http://act.couragecampaign.org/act/" accept-charset="utf-8">
+    <div class="form-wrap">
     <input type="hidden" name="utf8" value="&#x2714;">
+
     <ul class="compact" id="ak-errors"></ul>
-    <input name="first_name" id="id_first_name" type="hidden">
-    <input name="last_name" id="id_last_name" type="hidden">
-    <input name="email" placeholder="Email" id="id_email" type="text">
-    <input name="zip" id="id_zip" type="hidden">
-    <input name="phone" id="id_phone" type="hidden">
-    <input type="hidden" name="country" value="United States">
-    <p style="clear: both; text-align:center;"><input class="submitform" type="submit" value="Subscribe"></p>
+        <input name="email" id="id_email" type="text" placeholder="Email Address">
+        <input type="hidden" name="phone" id="id_phone" type="text">
+        <input type="hidden" name="country" value="United States">
+
+    <input class="submitform" type="submit" value="{{ $buttonText }}">
+
     <input type="hidden" name="page" value="CC-Institute-voter-registration">
-    <input type="hidden" name="lists" value="5" />
+    <input type="hidden" name="lists" value="25" />
+
   </div>
-</form>
-    
+    </form>
+    <div id="{{ $formName }}-replacement" class="signup-success" style="display: none;">You are now signed up!</div>
+</div>
+
+<script src="https://malsup.github.io/jquery.form.js"></script> 
+
+
 <script type="text/javascript">
-  actionkit.forms.contextRoot = 'https://act.couragecampaign.org/context/';
-  actionkit.forms.initForm('act');
+(function($) {
+$(document).ready(function() { 
+  //Check if form was submitted
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  console.log('queryString: ', queryString);
+  if(urlParams.has('action_id'))
+    console.log('Submitted')
+
+  //Catch error messages when sending
+  $('#signupForm')
+      .ajaxForm({
+          url : 'https://act.couragecampaign.org/act/',
+          dataType : 'json',
+          success : function (response) {
+              alert("The server says: " + response);
+          },
+          error : function (response) {
+              alert("The server says: " + response);
+          }
+      })
+  })
+
+  // Cancel regular form submission
+  $('#signupForm').submit(function(e){
+    e.preventDefault();
+  })
+})
+
+actionkit.forms.contextRoot = 'https://act.couragecampaign.org/context/';
+actionkit.forms.initForm('act');
 </script>

@@ -3,6 +3,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1">
 
+  @php wp_head() @endphp
+
   {{-- Font Awesome --}}
   <script src="https://kit.fontawesome.com/667efd8f5c.js" crossorigin="anonymous"></script>
 
@@ -11,6 +13,9 @@
 
   {{-- iFrame resizer --}}
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js" ></script>
+
+  {{-- Actionkit --}}
+  <script src="https://act.couragecampaign.org/resources/actionkit.js"></script>
 
 
 
@@ -43,5 +48,4 @@
 <meta name="msapplication-TileImage" content="@asset('images/favicon/ms-icon-144x144.png')">
 <meta name="theme-color" content="#ffffff">
 
-  @php wp_head() @endphp
 </head>

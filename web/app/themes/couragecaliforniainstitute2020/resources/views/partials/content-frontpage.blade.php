@@ -107,7 +107,7 @@
 <section id="newsletter">
     <div class="container">
         <h3>{!! $data['newsletter']['text'] !!}</h3>
-        @include('partials.newsletter-signup')
+        @include('partials.newsletter-signup', ['buttonText' => "Subscribe", "formName" => "signup"])
         <div class="success">
             {{ $data['newsletter']['success_message']}}
         </div>
