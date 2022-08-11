@@ -733,5 +733,9 @@ body.error404{
 .page-template-default{
     main.main .container{
         max-width: 800px;
+
+        h2{
+            color: theme-color(blue);
+        }
     }
 }
