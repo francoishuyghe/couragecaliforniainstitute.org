@@ -2,19 +2,11 @@
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
-<<<<<<< HEAD
-web/app/upgrade
-web/app/cache
-web/app/uploads/*
-!web/app/uploads/.gitkeep
-web/app/cache
-=======
-web/app/themes/twentytwentytwo/
+
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
->>>>>>> Initial commit on this new git
 
 # WordPress
 web/wp
