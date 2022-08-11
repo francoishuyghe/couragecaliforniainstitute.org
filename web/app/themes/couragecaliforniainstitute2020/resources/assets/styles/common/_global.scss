@@ -250,3 +250,40 @@ a{
 .sgpb-theme-1-overlay{
     background: none;
 }
+
+.wp-block-table,
+.wp-block-table.is-style-stripes{
+    margin-bottom: $grid-gutter;
+    border-bottom: 0px;
+
+    tr{
+        background-color: transparent;
+        
+        td{
+            border-bottom: solid 1px theme-color(blue);
+            padding: 20px 40px 20px 0;
+            color: theme-color(color);
+            
+            a{
+                color: theme-color(orange);
+            }
+            
+        }
+        
+        &:nth-child(odd) {
+            background-color: transparent!important;
+        }
+        
+        &:last-child{
+            td{
+                border-bottom: 0px;
+            }
+        }
+        
+        &:first-child{
+            td{
+                padding-top: 0;
+            }
+        }
+    }
+}

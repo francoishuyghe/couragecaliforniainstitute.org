@@ -16,13 +16,17 @@ header.banner{
   z-index: 99;
   padding: 10px;
   height: 70px;
-  overflow: hidden;
   transition: .25s;
   background-color: theme-color(black);
+  overflow: hidden;
 
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
+
+  @include media-breakpoint-up(md){
+    overflow: unset;
+  }
 
   a.brand{
     position: absolute;
@@ -46,6 +50,17 @@ header.banner{
     flex-flow: row wrap;
     align-items: center;
 
+    & > li{
+      padding: 20px 1rem;
+
+      &:first-child{
+        padding-left: 0;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+
     li.first-social{
       padding-right: 0;
     }
@@ -55,12 +70,12 @@ header.banner{
         width: 100%;
         text-align: center;
   
-        &:nth-last-child(2){
+        &.menu-item-object-language_switcher:nth-last-child(2){
           width: 50%;
           text-align: right;
         }
   
-        &:last-child{
+        &.menu-item-object-language_switcher:last-child{
           width: 50%;
           text-align: left;
         }
@@ -98,7 +113,7 @@ header.banner{
       padding-right: 5px;
     }
 
-    li:last-child{
+    li.menu-item-object-language_switcher:last-child{
       padding-left: 0;
 
       &:before{
@@ -108,9 +123,57 @@ header.banner{
     }
   }
 
+  .menu-item-has-children{
+    position: relative;
+    
+    &> a{
+      pointer-events: none;
+      cursor: default;
+    }
+    
+    .sub-menu{
+      padding-left: 0;
+      
+      li{
+        list-style: none;
+        font-size: .9em;
+      }
+    }
+    
+    @include media-breakpoint-up(xl){
+      &> a{
+        pointer-events: all;
+      }
+
+      &:hover > .sub-menu,
+      &:focus-within > .sub-menu,
+      .sub-menu:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+      }
+
+      .sub-menu{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+        margin-top: 20px;
+        left: 0;
+        display: none;
+        background: theme-color(black);
+        min-width: 100%;
+
+        li{
+          width: max-content;
+        }
+      }
+    }
+  }
+
   .hamburger{
     font-size: 30px;
-    color: theme-color(black);
+    color: theme-color(white);
     cursor: pointer;
 
     .fa-times{
@@ -146,7 +209,7 @@ header.banner{
   @include media-breakpoint-up(xl){
     display: block;
     height: auto;
-    padding: 20px;
+    padding: 0 20px;
 
     a.brand{
       position: absolute;
@@ -244,8 +307,15 @@ body.home{
       &:nth-last-child(2) a{
         color: theme-color(orange);
       }
-    }
 
+      .sub-menu{
+        background-color: theme-color(blue);
+        li a{
+          color: theme-color(white);
+        }
+      }
+    }
+    
     a.brand{
       img{
         &.white{
@@ -256,6 +326,10 @@ body.home{
           display: block;
         }
       }
+    }
+    
+    .hamburger{
+      color: theme-color(black);
     }
   }
 
@@ -285,6 +359,10 @@ body.home{
             color: theme-color(orange);
           }
         }
+
+        .sub-menu{
+          background-color: theme-color(black);
+        }
       }
   
       a.brand{
@@ -297,6 +375,10 @@ body.home{
             display: block;
           }
         }
+      }
+
+      .hamburger{
+        color: theme-color(white);
       }
     }
 }
