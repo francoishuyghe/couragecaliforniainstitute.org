@@ -109,7 +109,7 @@ header.banner{
       }
     }
 
-    li:nth-last-child(2){
+    &> li:nth-last-child(2){
       padding-right: 5px;
     }
 
