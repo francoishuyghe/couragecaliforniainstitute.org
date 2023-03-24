@@ -13,7 +13,7 @@ class PageBlog extends Composer
      * @var array
      */
     protected static $views = [
-        '*',
+        'page-blog',
     ];
 
     /**

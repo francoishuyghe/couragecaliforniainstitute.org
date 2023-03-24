@@ -10,6 +10,8 @@
     </div>
 </section>
 
+{!! the_content() !!}
+
 <section id="register">
     <div class="row">
         <div class="col-md-6 text">
