@@ -6,4 +6,5 @@ node_modules
 npm-debug.log
 yarn-error.log
 /vendor
+/.yarn
 resources/assets/config-local.json

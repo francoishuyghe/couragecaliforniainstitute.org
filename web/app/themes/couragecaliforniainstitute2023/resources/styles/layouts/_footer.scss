@@ -1,0 +1,119 @@
+footer.content-info{
+    background-color: $black;
+    color: $white;
+    padding: calc($grid-gutter / 2) 0;
+    text-align: center;
+    
+    @include media-breakpoint-up(md){
+        padding: $grid-gutter 0;
+        text-align: left;
+    }
+
+    section{
+        margin-bottom: 20px;
+    }
+
+    .row{
+        flex-flow: column-reverse;
+
+        @include media-breakpoint-up(md){
+            flex-flow: row;
+        }
+    }
+    
+    //Left Footer
+    #leftFooter{
+
+        img{
+            width: 150px;
+    
+            @include media-breakpoint-up(md){
+                width: 200px;
+            }
+        }
+
+        .textwidget{
+            font-size: .7em;
+            color: transparentize($color: #ffffff, $amount: .7)
+        }
+    }
+
+    //Right Footer
+    #rightFooter{
+        display: none;
+        margin-bottom: $grid-gutter;
+        
+        @include media-breakpoint-up(md){
+            margin-bottom: 0;
+            display: block;
+        }
+
+        .textwidget{
+            font-size: .9em;
+        }
+
+        #menu-footer{
+            padding-left: 0;
+            display: flex;
+            flex-flow: row wrap;
+
+            li{
+                list-style: none;
+
+                &:first-child{
+                    flex: 0 0 100%;
+                }
+    
+                a{
+                    color: $white;
+                    text-transform: uppercase;
+                    
+                    @include media-breakpoint-up(md){
+                        font-size: .8em;
+                    }
+    
+                    i{
+                        display: inline-block;
+                        margin-left: 10px;
+                    }
+    
+                    &:hover{
+                        text-decoration: none;
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+
+    //Newsletter Form
+    #newsletterFooter{
+        padding: 0 $grid-gutter;
+
+        .button{
+            background-color: $blue;
+        }
+
+        h4{
+            color: $orange;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .form-wrap{
+            input[name="email"]{
+                color: $white;
+                border-bottom-color: $white;
+    
+                &::placeholder {
+                    color: $grey;
+                    opacity: 1;
+                }
+            }
+
+            input[type="submit"]{
+                font-size: .8em;
+            }
+        }
+    }
+}

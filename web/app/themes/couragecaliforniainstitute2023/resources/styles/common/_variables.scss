@@ -1,0 +1,31 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #525ddc,
+  );
+
+  $white: #ffffff;
+  $grey: #999;
+  $lightgrey: #D8D8D8;
+  $teal: #0BBAB4;
+  $black: #000000;
+  $blue:#0C71CE;
+  $orange: #FCA620;
+$beige: #EEE6D9;
+
+$grid-gutter: 50px;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+//Fonts
+@font-face {
+  font-family: 'Gilam';
+  src: url('../../fonts/Gilam-SemiBold.woff2') format('woff2'),
+      url('../../fonts/Gilam-SemiBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

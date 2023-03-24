@@ -1,0 +1,106 @@
+.single{
+    .main{
+        padding: 0px 0 100px;
+        min-height: 100vh;
+
+        .container{
+            max-width: 900px;
+        }
+    }
+
+    article{
+        header{
+            padding: 150px 0 20px;
+            margin-bottom: calc($grid-gutter / 2);
+
+            h1{
+                margin-bottom: 0;
+            }
+
+            .byline{
+                font-size: .9em;
+                margin-bottom: 0;
+                
+                a{
+                    color: $black;
+                }
+            }
+            
+            .date{
+                font-size: .9em;
+                color: $grey;
+            }
+
+            a.back{
+                color: $lightgrey;
+                transition: .25s;
+                
+                &:hover{
+                    text-decoration: none;
+                    color: $black;
+                }
+            }
+
+            .categories{
+                a{
+                    color: $orange;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: .8em;
+                    letter-spacing: .05em;
+                }
+            }
+
+            .swp_social_panel{
+                display: block;
+
+                a{
+                    color: $black;
+                }
+
+                &:hover{
+                    a{
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        .thumbnail{
+            margin-bottom: $grid-gutter;
+
+            img{
+                width: 100%;
+                max-width: 100%;
+                margin: auto;
+            }
+        }
+
+        a:not(.wp-block-button__link){
+            color: $blue;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .footer-links{
+        margin-top: $grid-gutter;
+
+        h6{
+            font-weight: bold;
+            text-transform: uppercase;
+
+        }
+        
+        .right{
+            text-align: right;
+            padding-left: $grid-gutter;
+        }
+
+        .left{
+            padding-right: $grid-gutter;
+        }
+    }
+}

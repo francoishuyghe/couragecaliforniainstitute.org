@@ -1,0 +1,290 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Gilam';
+    margin-bottom: calc($grid-gutter / 2);
+}
+
+p{
+    margin-bottom: 1em;
+}
+
+
+a{
+    color: inherit;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: none;
+        color: $blue;
+    }
+
+    &.wp-block-button__link{
+        font-family: 'Gilam';
+        background-color: $blue;
+        color: $white;
+        padding: 10px 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: .25s;
+        border-radius: 0;
+    
+        &:hover{
+            background-color: $orange;
+            text-decoration: none;
+        }
+    }
+
+    &.button{
+        font-family: 'Gilam';
+        background-color: $black;
+        color: $white;
+        padding: 10px 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: .25s;
+    
+        &:hover{
+            background-color: $orange;
+        }
+
+        &.blue{
+            background-color: $blue;
+
+            &:hover{
+                background-color: $orange;
+            }
+        }
+    }
+}
+
+.underlined{
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    white-space: nowrap;
+    padding-bottom: 1px;
+}
+
+//Menu Items
+.menu{
+    li{
+        a{
+
+        }
+
+        &.donate a{
+            color: $orange;
+        }
+    }
+}
+
+//Drawers
+.drawer-wrap{
+    .drawer-title{
+        cursor: pointer;
+
+        &:hover{
+            color: $orange;
+        }
+    }
+
+    .drawer-content{
+      display: none;
+    }
+  
+    &.active{
+      .drawer-content{
+        display: block;
+      }
+    }
+  }
+
+  //Newsletter Form
+
+.newsletter-form .form-wrap{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    @include media-breakpoint-up(md){
+        flex-flow: row wrap;
+    }
+}
+
+.form-wrap{
+
+    #ak-errors{
+        order: 1;
+        flex: 0 0 100%;
+        color: red;
+        list-style: none;
+    }
+
+    input[type="email"],
+    input[type="tel"],
+    input[type="text"]{
+        border: 0;
+        border-bottom: 2px solid black;
+        background-color: transparent;
+        padding: 10px 20px;
+        margin-right: 10px;
+        flex: 1;
+        max-width: 500px;
+        width: 100%;
+        margin-bottom: 20px;
+
+        &:focus{
+            outline: 0;
+        }
+
+        &::placeholder{
+            color: transparentize($color: #000000, $amount: .4);
+        }
+
+        &:-internal-autofill-selected{
+            background-color: transparent!important;
+        }
+    }
+
+    input[type="submit"]{
+        background-color: $blue;
+        color: $white;
+        text-transform: uppercase;
+        border: 0;
+        border-radius: 0;
+        outline: 0;
+        padding: 10px 20px;
+    }
+}
+
+//Popup
+#sgpb-popup-dialog-main-div{
+    //margin-bottom: 0!important;
+    width: 100%;
+    background-color: $black!important;
+    color: $white!important;
+    border-radius: 0!important;
+    border: 0!important;
+    box-shadow: 0 0!important;
+    
+    @include media-breakpoint-up(md){
+        background-image: url('../../images/newsletter-background.jpg');
+        background-size: cover;
+    }
+    
+    .sg-popup-builder-content{
+        padding: calc($grid-gutter / 2);
+
+        .sgpb-popup-builder-content-html{
+            width: 100%;
+        }
+        
+        @include media-breakpoint-up(md){
+            padding: calc($grid-gutter * 2);
+            display: flex;
+            align-items: center;
+
+            h2, p{
+                max-width: 500px;
+                margin: 0 auto 20px;
+            }
+        }
+
+        h2{
+            color: $orange!important;
+        }
+    }
+
+    form{
+        background: $white;
+        padding: calc($grid-gutter / 2);
+        border-radius: 10px;
+
+        @include media-breakpoint-up(md){
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h3{
+            color: $black;
+            font-size: 1.2em;
+        }
+
+        p{
+            margin-bottom: 0;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        input{
+            margin-bottom: 0;
+        }
+
+        input[type="email"],
+        input[type="tel"],
+        input[type="text"]{
+            border: 1px solid $black;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[class="submitform"]{
+            background: $orange;
+            width: 100%;
+            color: $black;
+        }
+    }
+}
+
+.sgpb-popup-close-button-1{
+    right: 40px!important;
+    top: 25px;
+    bottom: auto!important;
+}
+
+.sgpb-theme-1-overlay{
+    background: none;
+}
+
+.wp-block-table,
+.wp-block-table.is-style-stripes{
+    margin-bottom: $grid-gutter;
+    border-bottom: 0px;
+
+    tr{
+        background-color: transparent;
+        
+        td{
+            border-bottom: solid 1px $blue;
+            padding: 20px 40px 20px 0;
+            color: theme-color(color);
+            
+            a{
+                color: $orange;
+            }
+            
+        }
+        
+        &:nth-child(odd) {
+            background-color: transparent!important;
+        }
+        
+        &:last-child{
+            td{
+                border-bottom: 0px;
+            }
+        }
+        
+        &:first-child{
+            td{
+                padding-top: 0;
+            }
+        }
+    }
+}
