@@ -1,0 +1,52 @@
+.wp-block-home-section{
+
+    &.blue{
+        background-color: $blue;
+
+        h3{
+            color: $orange;
+        }
+
+        p{
+            color: $white;
+        }
+    }
+    
+    &.teal{
+        background-color: $teal;
+
+        h3{
+            color: $blue;
+        }
+    }
+    &.orange{
+        background-color: $orange;
+
+        h3{
+            color: $blue;
+        }
+    }
+    &.beige{
+        background-color: $beige;
+
+        h3{
+            color: $orange;
+        }
+    }
+
+    .wrap{
+        padding: 150px 50px;
+    }
+
+    .image{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &:nth-child(2n){
+        .row{
+            flex-direction: row-reverse;
+        }
+    }
+}

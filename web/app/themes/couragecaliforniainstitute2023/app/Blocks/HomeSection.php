@@ -158,7 +158,8 @@ class homeSection extends Block
             ->addLink('link')
             ->addText('link_text')
             ->addSelect('background_color', [
-                'choices' => ['Blue', 'Yellow'],
+                'choices' => ['blue', 'teal', 'orange', 'beige'],
+                'return_format' => 'value',
             ])
             ->addImage('image');
 
