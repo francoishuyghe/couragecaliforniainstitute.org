@@ -122,7 +122,7 @@ class Homesection extends Block
      *
      * @var array
      */
-    public $homeSection = [
+    public $example = [
         'title' => 'Section title',
     ];
 
@@ -150,9 +150,9 @@ class Homesection extends Block
      */
     public function fields()
     {
-        $homeSection = new FieldsBuilder('homeSection');
+        $homesection = new FieldsBuilder('homesection');
 
-        $homeSection
+        $homesection
             ->addText('title')
             ->addText('description')
             ->addLink('link')
@@ -163,7 +163,7 @@ class Homesection extends Block
             ])
             ->addImage('image');
 
-        return $homeSection->build();
+        return $homesection->build();
     }
 
     /**
