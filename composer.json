@@ -66,7 +66,7 @@
     "roots/wp-password-bcrypt": "1.1.0",
     "deliciousbrains-plugin/wp-migrate-db-pro": "2.0.2",
     "wpackagist-plugin/advanced-custom-fields": "^5.9.6",
-    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^2.1.0",
+    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "2.0.2",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.12.3",
     "wpackagist-plugin/wp-fastest-cache": "^0.9.9",
     "wpackagist-plugin/popup-builder":"4.1.12",

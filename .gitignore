@@ -15,6 +15,7 @@ web/.htaccess
 
 # Logs
 *.log
+*.yarn/
 
 # Dotenv
 .env
