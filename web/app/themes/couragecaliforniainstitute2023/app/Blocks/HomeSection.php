@@ -5,21 +5,21 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class Homesection extends Block
+class Section extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Home Section';
+    public $name = 'Section';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'Content sections on the home page';
+    public $description = 'A simple Section block.';
 
     /**
      * The block category.
@@ -123,7 +123,11 @@ class Homesection extends Block
      * @var array
      */
     public $example = [
-        'title' => 'Section title',
+        'items' => [
+            ['item' => 'Item one'],
+            ['item' => 'Item two'],
+            ['item' => 'Item three'],
+        ],
     ];
 
     /**
@@ -150,20 +154,16 @@ class Homesection extends Block
      */
     public function fields()
     {
-        $homesection = new FieldsBuilder('homesection');
+        $Section = new FieldsBuilder('Section');
 
-        $homesection
+        $Section
             ->addText('title')
             ->addText('description')
             ->addLink('link')
             ->addText('link_text')
-            ->addSelect('background_color', [
-                'choices' => ['blue', 'teal', 'orange', 'beige'],
-                'return_format' => 'value',
-            ])
             ->addImage('image');
 
-        return $homesection->build();
+        return $Section->build();
     }
 
     /**
