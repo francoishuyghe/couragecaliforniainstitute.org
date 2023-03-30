@@ -48,7 +48,7 @@
 </section>
 
 {{-- Track --}}
-<section id="track">
+{{-- <section id="track">
     <div class="row">
         <div class="col-md-6 image" style="background-image: url({{ $data['track']['image']['sizes']['large'] }})"></div>
         <div class="col-md-6 text">
@@ -58,9 +58,9 @@
             </div>
         </div>
     </div>
-</section>
+</section>--}}
 
-<section id="counties">
+{{-- <section id="counties">
     <div class="container">
         <h2>{{ $data['counties']['title'] }}</h2>
         {!! $data['counties']['text'] !!}
@@ -78,11 +78,10 @@
                 @endif
             @endforeach
         </select>
-        {{-- <p>Or check out <a href="/statewide-voting-information">statewide voting information</a>.</p> --}}
     </div>
     <img src="@asset('images/cc-ballot.png')" class="ballot" />
 <img src="{{ $data['counties']['illustration']['url'] }}" class="mailbox" />
-</section>
+</section>  --}}
 
 
 {{-- EVENTS --}}
@@ -109,19 +108,9 @@
 </section>
 @endif --}}
 
-<section id="newsletter">
-    <div class="container">
-        <h3>{!! $data['newsletter']['text'] !!}</h3>
-        @include('partials.newsletter-signup', ['buttonText' => "Subscribe", "formName" => "signup"])
-        @if ( array_key_exists('success_message', $data['newsletter']) )
-        <div class="success">
-            {{ $data['newsletter']['success_message']}}
-        </div>
-        @endif
-    </div>
-</section>
 
-<section id="faq">
+
+{{-- <section id="faq">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -141,12 +130,24 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <section id="about">
     <div class="container">
         <h3>{{ $data['about']['title'] }}</h3>
         {!! $data['about']['text'] !!}
         <a class="button" href="/about">Learn More</a>
+    </div>
+</section>
+
+<section id="newsletter">
+    <div class="container">
+        <h3>{!! $data['newsletter']['text'] !!}</h3>
+        @include('partials.newsletter-signup', ['buttonText' => "Subscribe", "formName" => "signup"])
+        @if ( array_key_exists('success_message', $data['newsletter']) )
+        <div class="success">
+            {{ $data['newsletter']['success_message']}}
+        </div>
+        @endif
     </div>
 </section>

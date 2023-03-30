@@ -17,14 +17,9 @@ add_action('wp_enqueue_scripts', function () {
     bundle('app')->enqueue();
 }, 100);
 
-/**
- * Register the theme assets with the block editor.
- *
- * @return void
- */
-add_action('enqueue_block_editor_assets', function () {
-    bundle('editor')->enqueue();
-}, 100);
+
+
+
 
 /**
  * Register the initial theme setup.
@@ -133,6 +128,16 @@ add_action('widgets_init', function () {
         'name' => __('Footer', 'sage'),
         'id' => 'sidebar-footer',
     ] + $config);
+
+    register_sidebar([
+        'name'          => __('Footer Right', 'sage'),
+        'id'            => 'footer-right'
+    ] + $config);
+    
+    register_sidebar([
+        'name'          => __('Footer Left', 'sage'),
+        'id'            => 'footer-left'
+    ] + $config);
 });
 
 // Add a cookie to display popup
@@ -172,3 +177,25 @@ function HowTo_custom_init()
   ); 
   register_post_type('howto',$args);
 }
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', function( $length ) {
+	return 20;
+}, 999 );
+
+/**
+ * Register the theme assets with the block editor.
+ *
+ * @return void
+ */
+add_action('enqueue_block_editor_assets', function () {
+    bundle('editor')->enqueue();
+}, 100);

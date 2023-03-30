@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:13milliseconds/social-warfare-pro.git",
-                "reference": "d5eec18dabaacc906642202f0a6f0d579313352a"
+                "reference": "8fc31dbd4ac5c35a2797eedd33434279cfe414f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/13milliseconds/social-warfare-pro/zipball/d5eec18dabaacc906642202f0a6f0d579313352a",
-                "reference": "d5eec18dabaacc906642202f0a6f0d579313352a",
+                "url": "https://api.github.com/repos/13milliseconds/social-warfare-pro/zipball/8fc31dbd4ac5c35a2797eedd33434279cfe414f0",
+                "reference": "8fc31dbd4ac5c35a2797eedd33434279cfe414f0",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 "source": "https://github.com/13milliseconds/social-warfare-pro/tree/master",
                 "issues": "https://github.com/13milliseconds/social-warfare-pro/issues"
             },
-            "time": "2021-04-30T00:12:10+00:00"
+            "time": "2023-03-30T19:23:05+00:00"
         },
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",

@@ -16,7 +16,7 @@
         background-color: $teal;
 
         h3{
-            color: $blue;
+            color: $white;
         }
     }
     &.orange{
@@ -36,6 +36,10 @@
 
     .wrap{
         padding: 150px 50px;
+
+        h3{
+            margin-bottom: 10px;
+        }
     }
 
     .image{

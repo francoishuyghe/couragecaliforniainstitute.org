@@ -1,5 +1,4 @@
-export default {
-  init() {
+
     // JavaScript to be fired on all pages
 
     //Drawer interactions
@@ -57,8 +56,3 @@ export default {
         $('#newsletter').removeClass('active');
        }, 5000)
     }
-  },
-  finalize() {
-    // JavaScript to be fired on all pages, after page specific JS is fired
-  },
-};
