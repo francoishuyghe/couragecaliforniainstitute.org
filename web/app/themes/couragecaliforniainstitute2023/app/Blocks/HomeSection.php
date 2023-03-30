@@ -5,7 +5,7 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class homeSection extends Block
+class Homesection extends Block
 {
     /**
      * The block name.
