@@ -12,7 +12,7 @@
 
 {!! the_content() !!}
 
-<section id="register">
+{{-- <section id="register">
     <div class="row">
         <div class="col-md-6 text">
             <div class="wrap">
@@ -22,7 +22,7 @@
         </div>
         <div class="col-md-6 image" style="background-image: url({{ $data['register']['image']['sizes']['large'] }})"></div>
     </div>
-</section>
+</section> --}}
 
 {{-- Blog --}}
 <section id="blog">
