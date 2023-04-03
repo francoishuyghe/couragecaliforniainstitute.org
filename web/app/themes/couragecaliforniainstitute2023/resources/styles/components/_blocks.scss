@@ -1,12 +1,16 @@
 .wp-block-featured-section{
-
+    background-position: 65% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
     &.blue{
         background-color: $blue;
-
+        background-image: url(../../images/dots/stars-offwhite.png);
+         
         h3{
             color: $orange;
         }
-
+        
         p{
             color: $white;
         }
@@ -14,20 +18,23 @@
     
     &.teal{
         background-color: $teal;
-
+        background-image: url(../../images/dots/stars-blue.png);
+        
         h3{
             color: $white;
         }
     }
     &.orange{
         background-color: $orange;
-
+        background-image: url(../../images/dots/stars-teal.png);
+        
         h3{
             color: $blue;
         }
     }
     &.beige{
         background-color: $beige;
+        background-image: url(../../images/dots/stars-yellow.png);
 
         h3{
             color: $orange;
@@ -49,6 +56,7 @@
     }
 
     &:nth-child(2n){
+        background-position: 35% center;
         .row{
             flex-direction: row-reverse;
         }

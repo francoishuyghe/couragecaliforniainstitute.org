@@ -17,9 +17,14 @@ add_action('wp_enqueue_scripts', function () {
     bundle('app')->enqueue();
 }, 100);
 
-
-
-
+/**
+ * Register the theme assets with the block editor.
+ *
+ * @return void
+ */
+add_action('enqueue_block_editor_assets', function () {
+    bundle('editor')->enqueue();
+}, 100);
 
 /**
  * Register the initial theme setup.
@@ -190,12 +195,3 @@ function wpdocs_custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', function( $length ) {
 	return 20;
 }, 999 );
-
-/**
- * Register the theme assets with the block editor.
- *
- * @return void
- */
-add_action('enqueue_block_editor_assets', function () {
-    bundle('editor')->enqueue();
-}, 100);
