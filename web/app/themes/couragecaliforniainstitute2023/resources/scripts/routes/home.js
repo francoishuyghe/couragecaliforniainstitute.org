@@ -1,5 +1,4 @@
     // JavaScript to be fired on the home page
-console.log('Home Page')
 
     // Link to selected county when selected
     $('#counties select').change(function () { 

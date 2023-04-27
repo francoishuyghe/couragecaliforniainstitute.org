@@ -4,7 +4,9 @@
           <div class="wrap">
               <h3>{{ $title }}</h3>
               <p>{{ $description }}</p>
-              <a class="button" href="{{ $link['url'] }}">{{ $link_text }}</a>
+              @if($link)
+                <a class="button" href="{{ $link['url'] }}">{{ $link_text }}</a>
+              @endif
           </div>
       </div>
       @if($image)
