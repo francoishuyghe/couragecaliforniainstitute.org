@@ -17,7 +17,9 @@
     <div class="date">
       {{ the_date() }}
     </div>
-    @php social_warfare() @endphp
+    @if(function_exists('social_warfare'))  
+      @php social_warfare() @endphp
+    @endif
   </header>
 
   @php $thumb_url = get_the_post_thumbnail_url() @endphp
