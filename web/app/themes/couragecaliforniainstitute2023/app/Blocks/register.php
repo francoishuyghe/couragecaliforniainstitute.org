@@ -4,23 +4,22 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use WP_Query;
 
-class Exampleblock extends Block
+class register extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Exampleblock';
+    public $name = 'Register';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'A simple Exampleblock block.';
+    public $description = 'A simple Register block.';
 
     /**
      * The block category.
@@ -101,34 +100,15 @@ class Exampleblock extends Block
         'jsx' => true,
     ];
 
-    /**
-     * The block styles.
-     *
-     * @var array
-     */
-    public $styles = [
-        [
-            'name' => 'light',
-            'label' => 'Light',
-            'isDefault' => true,
-        ],
-        [
-            'name' => 'dark',
-            'label' => 'Dark',
-        ]
-    ];
-
-    /**
+     /**
      * The block preview example data.
      *
      * @var array
      */
     public $example = [
-        'items' => [
-            ['item' => 'Item one'],
-            ['item' => 'Item two'],
-            ['item' => 'Item three'],
-        ],
+        'title' => "Make sure your voice is heard each and every election year.",
+        'button' => 'Register Now',
+        'text' => "Register to vote. Think you’re registered? Don’t think, know. Confirm it!",
     ];
 
     /**
@@ -139,7 +119,10 @@ class Exampleblock extends Block
     public function with()
     {
         return [
-            'items' => $this->items(),
+            'title' => get_field('title') ?: $this->example['title'],
+            'text' => get_field('text') ?: $this->example['text'],
+            'button' => get_field('button') ?: $this->example['button'],
+            'image' => get_field('image')
         ];
     }
 
@@ -150,24 +133,15 @@ class Exampleblock extends Block
      */
     public function fields()
     {
-        $exampleblock = new FieldsBuilder('exampleblock');
+        $register = new FieldsBuilder('register');
 
-        $exampleblock
-            ->addRepeater('items')
-                ->addText('item')
-            ->endRepeater();
+        $register
+            ->addText('title')
+            ->addText('text')
+            ->addText('button')
+            ->addImage('image');
 
-        return $exampleblock->build();
-    }
-
-    /**
-     * Return the items field.
-     *
-     * @return array
-     */
-    public function items()
-    {
-        return get_field('items') ?: $this->example['items'];
+        return $register->build();
     }
 
     /**

@@ -6,21 +6,21 @@ use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 use WP_Query;
 
-class Exampleblock extends Block
+class counties extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Exampleblock';
+    public $name = 'Counties';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'A simple Exampleblock block.';
+    public $description = 'A simple Counties block.';
 
     /**
      * The block category.
@@ -102,33 +102,13 @@ class Exampleblock extends Block
     ];
 
     /**
-     * The block styles.
-     *
-     * @var array
-     */
-    public $styles = [
-        [
-            'name' => 'light',
-            'label' => 'Light',
-            'isDefault' => true,
-        ],
-        [
-            'name' => 'dark',
-            'label' => 'Dark',
-        ]
-    ];
-
-    /**
      * The block preview example data.
      *
      * @var array
      */
     public $example = [
-        'items' => [
-            ['item' => 'Item one'],
-            ['item' => 'Item two'],
-            ['item' => 'Item three'],
-        ],
+        'title' => 'How to Vote in California',
+        'text' => 'Voting by mail? Need to know where to drop-off your ballot?'
     ];
 
     /**
@@ -139,7 +119,10 @@ class Exampleblock extends Block
     public function with()
     {
         return [
-            'items' => $this->items(),
+            'title' => get_field('title') ?: $this->example['title'],
+            'text' => get_field('text') ?: $this->example['text'],
+            'illustration' => get_field('illustration'),
+            'post_categories' => $this->post_categories(),
         ];
     }
 
@@ -150,14 +133,14 @@ class Exampleblock extends Block
      */
     public function fields()
     {
-        $exampleblock = new FieldsBuilder('exampleblock');
+        $counties = new FieldsBuilder('counties');
 
-        $exampleblock
-            ->addRepeater('items')
-                ->addText('item')
-            ->endRepeater();
+        $counties
+            ->addText('title')
+            ->addText('text')
+            ->addImage('illustration');
 
-        return $exampleblock->build();
+        return $counties->build();
     }
 
     /**
@@ -168,6 +151,10 @@ class Exampleblock extends Block
     public function items()
     {
         return get_field('items') ?: $this->example['items'];
+    }
+
+    public function post_categories(){
+        return get_categories();
     }
 
     /**

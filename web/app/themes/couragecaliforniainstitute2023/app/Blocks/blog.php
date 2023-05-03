@@ -6,21 +6,21 @@ use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 use WP_Query;
 
-class Exampleblock extends Block
+class blog extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Exampleblock';
+    public $name = 'Blog';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'A simple Exampleblock block.';
+    public $description = 'A simple Blog block.';
 
     /**
      * The block category.
@@ -102,33 +102,14 @@ class Exampleblock extends Block
     ];
 
     /**
-     * The block styles.
-     *
-     * @var array
-     */
-    public $styles = [
-        [
-            'name' => 'light',
-            'label' => 'Light',
-            'isDefault' => true,
-        ],
-        [
-            'name' => 'dark',
-            'label' => 'Dark',
-        ]
-    ];
-
-    /**
      * The block preview example data.
      *
      * @var array
      */
     public $example = [
-        'items' => [
-            ['item' => 'Item one'],
-            ['item' => 'Item two'],
-            ['item' => 'Item three'],
-        ],
+        'title' => 'Know Your Power',
+        'description' => 'Want to make change in your community? Check out our blog!',
+        'button' => 'Read More',
     ];
 
     /**
@@ -139,7 +120,10 @@ class Exampleblock extends Block
     public function with()
     {
         return [
-            'items' => $this->items(),
+            'title' => get_field('title') ?: $this->example['title'],
+            'description' => get_field('description') ?: $this->example['description'],
+            'button' => get_field('button') ?: $this->example['button'],
+            'latest_posts' => $this->get_latest_posts()
         ];
     }
 
@@ -150,24 +134,32 @@ class Exampleblock extends Block
      */
     public function fields()
     {
-        $exampleblock = new FieldsBuilder('exampleblock');
+        $blog = new FieldsBuilder('blog');
 
-        $exampleblock
-            ->addRepeater('items')
-                ->addText('item')
-            ->endRepeater();
+        $blog
+            ->addText('title')
+            ->addText('description')
+            ->addText('button');
 
-        return $exampleblock->build();
+        return $blog->build();
     }
 
     /**
-     * Return the items field.
      *
      * @return array
      */
-    public function items()
+    public function get_latest_posts()
     {
-        return get_field('items') ?: $this->example['items'];
+        $args = array(
+			'post_type' => 'post',
+	    	'post_status'            => array('publish'), 
+            'posts_per_page'         => '3', 
+            'order'                  => 'DESC',
+            'orderby'                => 'date',
+            'ignore_sticky_posts' => 1
+	    );
+	    $the_query = new WP_Query( $args );
+	    return $the_query->posts;
     }
 
     /**

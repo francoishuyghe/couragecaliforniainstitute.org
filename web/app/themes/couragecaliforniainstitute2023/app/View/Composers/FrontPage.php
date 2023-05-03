@@ -24,27 +24,8 @@ class FrontPage extends Composer
     public function with()
     {
         return [
-            'latest_posts' => $this->latest_posts(),
-            'post_categories' => $this->post_categories(),
             'data' => $this->data(),
         ];
-    }
-
-    public function latest_posts() {
-        $args = array(
-			'post_type' => 'post',
-	    	'post_status'            => array('publish'), 
-            'posts_per_page'         => '3', 
-            'order'                  => 'DESC',
-            'orderby'                => 'date',
-            'ignore_sticky_posts' => 1
-	    );
-	    $the_query = new WP_Query( $args );
-	    return $the_query->posts;
-    }
-
-    public function post_categories(){
-        return get_categories();
     }
 
     public function data() {
