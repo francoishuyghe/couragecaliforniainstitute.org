@@ -3,7 +3,7 @@
     @if($events)
     <section id="dates" class="{{ $block->classes }}">
         <div class="container">
-            <h3>{{ $data['key_dates']['title'] }}</h3>
+            <h3>{{ $title }}</h3>
             <div class="wrap">
                 @foreach ($events as $event)
                 <div class="date-wrap row">
@@ -15,7 +15,7 @@
                 @endforeach
             </div>
             <footer>
-                <a class="button blue" href="/calendar">Full Calendar</a>
+                <a class="button blue" href="/calendar">{{ $button }}</a>
             </footer>
         </div>
     </section>

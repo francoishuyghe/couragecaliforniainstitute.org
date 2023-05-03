@@ -106,7 +106,8 @@ class events extends Block
      * @var array
      */
     public $example = [
-        'title' => 'Californians: Know Your Dates'
+        'title' => 'Californians: Know Your Dates',
+        'button' => 'Full Calendar',
     ];
 
     /**
@@ -118,6 +119,7 @@ class events extends Block
     {
         return [
             'title' => get_field('title') ?: $this->example['title'],
+            'button' => get_field('button') ?: $this->example['button'],
         ];
     }
 
@@ -131,7 +133,8 @@ class events extends Block
         $events = new FieldsBuilder('events');
 
         $events
-            ->addText('title');
+            ->addText('title')
+            ->addText('button');
 
         return $events->build();
     }
