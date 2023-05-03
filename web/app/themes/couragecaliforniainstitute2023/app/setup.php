@@ -7,6 +7,7 @@
 namespace App;
 
 use function Roots\bundle;
+use WP_Query;
 
 /**
  * Register the theme assets.
@@ -14,8 +15,27 @@ use function Roots\bundle;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    bundle('app')->enqueue();
-}, 100);
+
+    $is_dev_request = getenv('WP_ENV') == 'development';
+    $rest_url = $is_dev_request ? 'http://localhost:3001/wp/wp-admin/admin-ajax.php' : admin_url('admin-ajax.php');
+  
+    $ajax_params = array(
+        'ajax_url' => $rest_url,
+        'ajax_nonce' => wp_create_nonce('my_nonce'),
+    );
+  
+    bundle('app')->enqueue()->localize('ajax_object', $ajax_params);;
+  }, 100);
+
+  add_action('admin_enqueue_scripts', function () {
+    $ajax_params = array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'ajax_nonce' => wp_create_nonce('my_nonce'),
+    );
+  
+    wp_enqueue_script('sage/admin.js', asset('scripts/admin.js'), ['jquery'], null, true);
+    wp_localize_script('sage/admin.js', 'ajax_object', $ajax_params);
+  });
 
 /**
  * Register the theme assets with the block editor.
@@ -195,3 +215,34 @@ function wpdocs_custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', function( $length ) {
 	return 20;
 }, 999 );
+
+// AJAX LOAD MORE
+function posts_load_more() {
+    $cats = $_POST['cats'];
+    $paged = $_POST['paged'];
+    $postNum = $_POST['postNum'];
+    $renderer = $_POST['renderer'];
+    
+    $ajaxposts = new WP_Query([
+        'post_type' => 'post',
+        'posts_per_page' => $postNum,
+        'paged' => $paged,
+        'post_status' => ['publish'],
+        'post__not_in' => get_option( 'sticky_posts' )
+    ]);
+    
+    $response = [];
+
+  
+    if($ajaxposts->have_posts()) {
+      while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+        array_push($response,  view($renderer)->render());
+      endwhile;
+    } else {
+      wp_send_json_success( false );
+    }
+  
+    wp_send_json_success( $response );
+  }
+  add_action('wp_ajax_posts_load_more', __NAMESPACE__ . '\\posts_load_more');
+  add_action('wp_ajax_nopriv_posts_load_more', __NAMESPACE__ . '\\posts_load_more');

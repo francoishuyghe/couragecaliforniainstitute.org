@@ -31,7 +31,8 @@ class PageBlog extends Composer
     public function blog_posts() {
         $args = array(
 			'post_type' => 'post',
-	    	'posts_per_page' => 16,
+            'post__in' => get_option( 'sticky_posts' ),
+	    	'posts_per_page' => 3,
 	    );
 	    $the_query = new WP_Query( $args );
 	    return $the_query->posts;

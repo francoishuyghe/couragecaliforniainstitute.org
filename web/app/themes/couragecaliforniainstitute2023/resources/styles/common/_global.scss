@@ -37,28 +37,33 @@ a{
             text-decoration: none;
         }
     }
+}
 
-    &.button{
-        font-family: 'Gilam';
-        background-color: $black;
-        color: $white;
-        padding: 10px 20px;
-        display: inline-block;
-        text-transform: uppercase;
-        transition: .25s;
-    
+.button{
+    font-family: 'Gilam';
+    background-color: $black;
+    color: $white;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: .25s;
+
+    &:hover{
+        background-color: $orange;
+    }
+
+    &.blue{
+        background-color: $blue;
+
         &:hover{
             background-color: $orange;
         }
-
-        &.blue{
-            background-color: $blue;
-
-            &:hover{
-                background-color: $orange;
-            }
-        }
     }
+}
+
+button{
+    border: 0;
+    outline: 0;
 }
 
 .underlined{

@@ -1,16 +1,14 @@
 @php global $post @endphp
 
-<section id="blog">
+<section id="blog" class="loading">
     <div class="row">
         @foreach ($blog_posts as $post)
-        @php setup_postdata($post) @endphp
-        @php $categories = get_the_category($post->ID) @endphp
-        
-        <div class="post-wrap @foreach($categories as $cat) {{ $cat->slug }}@endforeach">
-        @include('partials.post-block')
-        </div>
-        
-        @php wp_reset_postdata() @endphp
+            @php setup_postdata($post) @endphp
+            @include('partials.post-block')
+            @php wp_reset_postdata() @endphp
         @endforeach
+
     </div>
+    <div id="loadingDisplay"></div>
+    <button class="button" id="loadMore">Load More</button>
 </section>

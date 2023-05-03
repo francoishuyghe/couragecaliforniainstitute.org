@@ -1,30 +1,71 @@
-export default {
-  init() {
-    // JavaScript to be fired on the about us page
+class PostLoader {
+  constructor(container, postNum, renderer) {
+    this.container = container
+    this.postNum = postNum
+    this.renderer = renderer
+    this.currentPage = 0;
+    this.categories = [];
+    this.loading = true;
 
-    $('.cats a.available').on('click', function (e) {
-      e.preventDefault();
+    this.LOAD_POSTS = this.LOAD_POSTS.bind(this);
+  }
 
-      let cat = $(e.target).data('cat');
+  LOADING_TOGGLE(){
+    this.container.toggleClass('loading')
+    this.loading = !this.loading;
+  }
 
-      if ($(e.target).hasClass('active')) {
-        $('.cats a.available').removeClass('active');
-        $('#blog').removeClass('filtered');
+  LOAD_POSTS() {
+    this.currentPage++; // Do currentPage + 1, because we want to load the next page
 
-        $('.post-wrap').show();
-        
-      } else {
-        $('#blog').addClass('filtered');
-        $('.cats a.available').removeClass('active');
-        $(e.target).addClass('active');
-        //Hide all posts but the one category
-        $('.post-wrap').hide();
-        $('.post-wrap.' + cat).show();
+    if(!this.loading && this.currentPage !== 1) this.LOADING_TOGGLE()
+  
+    $.ajax({
+      type: 'POST',
+      context: this,
+      url: ajax_object.ajax_url,
+      data: {
+        action: 'posts_load_more',
+        paged: this.currentPage,
+        renderer: this.renderer,
+        cats: '', //this.categories.join('+'),
+        postNum: this.postNum,
+        nonce: ajax_object.ajax_nonce,
+      },
+      success: function (res) {
+        console.log(res.data);
+        this.LOADING_TOGGLE()
+        if(res.data){
+          //Check if there could be more posts
+          if(res.data.length < this.postNum){ 
+            this.container.addClass('no-more') } 
+          else {
+            this.container.removeClass('no-more')
+          }
+
+          //Append the new posts
+          $('.row', this.container).append(res.data);
+        } else {
+          this.container.addClass('no-more')
+          // $('.row', this.container).append('<div class="no-posts">No post satisfies these conditions.</div>');
+        }
+      },
+      error: (e) => {
+        this.container.addClass('no-more')
+        console.log(e);
       }
-      
-
-      // If the posts are filtered
-      // Toggle the 
     });
-  },
-};
+  }  
+}
+
+let blogPage = new PostLoader(
+  $('#blog'), //Container
+  16, // Postnum
+  'partials.post-block' //renderer
+  );
+
+  //INITIAL LOAD
+  blogPage.LOAD_POSTS()
+
+//Load More Posts
+$('#loadMore').on('click', blogPage.LOAD_POSTS);

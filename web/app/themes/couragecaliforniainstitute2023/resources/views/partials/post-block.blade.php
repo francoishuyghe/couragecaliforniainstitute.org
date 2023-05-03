@@ -1,4 +1,5 @@
 @php $cats = get_the_category($post->ID) @endphp
+<div class="post-wrap @foreach($cats as $cat) {{ $cat->slug }}@endforeach">
 <div class="post-block">
     <div class="thumbnail">
         <div class="thumbnail-wrap">
@@ -25,4 +26,5 @@
     </div>
     <div class="byline">By {{ get_the_author() }}</div>
     </div>
+</div>
 </div>

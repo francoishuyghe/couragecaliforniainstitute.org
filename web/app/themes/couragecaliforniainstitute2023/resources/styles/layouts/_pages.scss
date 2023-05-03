@@ -635,6 +635,46 @@ body.error404{
                 }
             }
         }
+
+        &.loading{
+            button{
+                opacity: .5;
+            }
+            #loadingDisplay{
+                display: block;
+            }
+        }
+        
+
+        &.no-more{
+            button{
+                display: none;
+            }
+        }
+
+        #loadingDisplay{
+            display: none;
+            height: 100vh;
+            background: $lightgrey;
+            margin-bottom: $grid-gutter;
+
+            animation-name: pulse;
+            animation-duration: 2.0s;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0;
+            }
+  
+            100% {
+                opacity: .3;
+            }
+        }
     }
 }
 
