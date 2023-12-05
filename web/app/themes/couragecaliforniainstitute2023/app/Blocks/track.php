@@ -12,28 +12,28 @@ class track extends Block
      *
      * @var string
      */
-    public $name = 'Track';
+    public $name = 'Ballot Tracker';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'A simple Track block.';
+    public $description = 'The frontpage Ballot Tracker block.';
 
     /**
      * The block category.
      *
      * @var string
      */
-    public $category = 'formatting';
+    public $category = 'features';
 
     /**
      * The block icon.
      *
      * @var string|array
      */
-    public $icon = 'editor-ul';
+    public $icon = 'heart';
 
     /**
      * The block keywords.

@@ -30,10 +30,7 @@ class FrontPage extends Composer
 
     public function data() {
         $data['intro'] = get_field('intro');
-        $data['register'] = get_field('register');
         $data['blog'] = get_field('blog');
-        $data['track'] = get_field('track');
-        $data['counties'] = get_field('counties');
         $data['newsletter'] = get_field('newsletter');
         $data['key_dates'] = get_field('key_dates');
         $data['faq'] = get_field('faq');

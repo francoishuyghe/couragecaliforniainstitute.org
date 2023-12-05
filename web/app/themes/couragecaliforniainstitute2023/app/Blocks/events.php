@@ -19,21 +19,21 @@ class events extends Block
      *
      * @var string
      */
-    public $description = 'A simple Events block.';
+    public $description = 'The Events block.';
 
     /**
      * The block category.
      *
      * @var string
      */
-    public $category = 'formatting';
+    public $category = 'features';
 
     /**
      * The block icon.
      *
      * @var string|array
      */
-    public $icon = 'editor-ul';
+    public $icon = 'heart';
 
     /**
      * The block keywords.

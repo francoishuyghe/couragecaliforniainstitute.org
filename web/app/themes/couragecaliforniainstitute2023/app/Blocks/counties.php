@@ -34,7 +34,7 @@ class counties extends Block
      *
      * @var string|array
      */
-    public $icon = 'editor-ul';
+    public $icon = 'heart';
 
     /**
      * The block keywords.

@@ -26,14 +26,14 @@ class faq extends Block
      *
      * @var string
      */
-    public $category = 'formatting';
+    public $category = 'features';
 
     /**
      * The block icon.
      *
      * @var string|array
      */
-    public $icon = 'editor-ul';
+    public $icon = 'heart';
 
     /**
      * The block keywords.

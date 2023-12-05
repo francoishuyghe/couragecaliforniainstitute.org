@@ -40,7 +40,7 @@ export default async (app) => {
      * Development origin
      * @see {@link https://bud.js.org/docs/bud.serve/}
      */
-    .serve('http://localhost:3001')
+    .serve('http://localhost:3005')
 
     /**
      * URI of the `public` directory
@@ -49,7 +49,7 @@ export default async (app) => {
     .setPublicPath('/app/themes/couragecaliforniainstitute2023/public/')
 
     .provide({
-      jquery: ["jQuery", "$"],
+      jquery: ['jQuery', '$'],
     })
 
     /**

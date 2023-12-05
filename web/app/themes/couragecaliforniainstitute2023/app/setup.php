@@ -17,7 +17,7 @@ use WP_Query;
 add_action('wp_enqueue_scripts', function () {
 
     $is_dev_request = getenv('WP_ENV') == 'development';
-    $rest_url = $is_dev_request ? 'http://localhost:3001/wp/wp-admin/admin-ajax.php' : admin_url('admin-ajax.php');
+    $rest_url = $is_dev_request ? 'http://localhost:3005/wp/wp-admin/admin-ajax.php' : admin_url('admin-ajax.php');
   
     $ajax_params = array(
         'ajax_url' => $rest_url,
