@@ -17,4 +17,4 @@
 </footer>
 
 {{-- iFrame Resizer --}}
-<script type="text/javascript">iFrameResize({ log:true, checkOrigin:false});</script>
+<script type="text/javascript">iFrameResize({ log:false, checkOrigin:false});</script>
