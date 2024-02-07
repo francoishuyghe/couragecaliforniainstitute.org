@@ -1,6 +1,6 @@
 // Import Bootstrap
 import 'bootstrap';
-import './routes/common.js'
+import './routes/common.js';
 
 import domReady from '@roots/sage/client/dom-ready';
 
@@ -8,18 +8,14 @@ import domReady from '@roots/sage/client/dom-ready';
  * Application entrypoint
  */
 domReady(async () => {
-  
-  
-  if($('.page.home').length > 0){
+  if ($('.page.home').length > 0) {
     import('./routes/home.js');
   }
-  if($('.page.blog').length > 0){
+  if ($('.page.blog').length > 0) {
     import('./routes/blog.js');
   }
-  if($('.page.about').length > 0){
-    import('./routes/about.js');
-  }
-  if($('.page.voter-tools').length > 0){
+  if ($('.page.voter-tools').length) {
+    console.log('Voter Tools');
     import('./routes/voter-tools.js');
   }
 });
